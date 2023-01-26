@@ -29,3 +29,32 @@
   --ifm-color-primary-lightest: #fab86e;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
+h2 {
+  color: #f7901e;
+}
+
+h3 {
+  color: var(--ifm-color-primary-lightest)
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  empty-cells: hide;
+  overflow-x: auto;
+}
+
+
+thead tr th:first-child,
+tbody tr td:first-child {
+  min-width: 10em;
+  max-width: fit-content;
+  word-break: keep-all;
+}
+
+th {
+  text-align: left;
+  height: min-content;
+}
+

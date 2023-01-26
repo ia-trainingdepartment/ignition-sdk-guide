@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Ignition SDK Guide',
+  title: "Ignition SDK Programmer's Guide",
   tagline: 'Dinosaurs are cool',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
@@ -58,7 +58,7 @@ const config = {
     ({
       navbar: {
         style: 'primary',
-        title: 'Ignition SDK Guide',
+        title: "Ignition SDK Programmer's Guide",
         logo: {
           alt: 'My Site Logo',
           src: 'img/Logo-IA-Gear.svg',
@@ -68,11 +68,26 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentation',
           },
-          // {to: '/blog', label: 'Blog', position: 'left'},
+           {to: '/blog', label: 'How-to Articles', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://forum.inductiveautomation.com/',
+            label: 'Forums',
+            position: 'right'
+          }, 
+          {
+            href: 'https://support.inductiveautomation.com/hc/en-us',
+            label: 'Support',
+            position: 'right'
+          },         
+          {
+            href: 'https://inductiveuniversity.com/', 
+            label: 'Inductive University', 
+            position: 'right'
+          },
+          {
+            href: 'https://github.com/inductiveautomation',
             label: 'GitHub',
             position: 'right',
           },

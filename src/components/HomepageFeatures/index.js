@@ -15,7 +15,7 @@ const FeatureList = [
   },
   {
     title: 'Module Examples',
-    Svg: require('@site/static/img/Logo-IA-Gear.svg').default,
+    Svg: require('@site/static/img/hex5.svg').default,
     description: (
       <>
         Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
