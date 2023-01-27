@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Ignition SDK Programmer's Guide",
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Develop Ignition Modules using the Ignition Module SDK',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -100,8 +100,12 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'SDK Guide',
                 to: '/docs/intro',
+              },
+              {
+                label: 'User Manual',
+                href: 'https://docs.inductiveautomation.com/display/DOC81',
               },
             ],
           },
@@ -110,15 +114,15 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: 'https://stackoverflow.com/questions/tagged/ignition',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Forums',
+                href: 'https://forum.inductiveautomation.com/',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/InductiveAuto',
               },
             ],
           },
@@ -131,12 +135,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/inductiveautomation',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Inductive Automation, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
