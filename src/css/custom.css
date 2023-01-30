@@ -45,6 +45,9 @@ table {
   overflow-x: auto;
 }
 
+a {
+  font-weight: 600;
+}
 
 thead tr th:first-child,
 tbody tr td:first-child {

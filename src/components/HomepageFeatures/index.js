@@ -35,16 +35,16 @@ const FeatureList = [
     Svg: require('@site/static/img/Logo-IgnitionExchange-Center.svg').default,
     description: (
       <>
-         Discover, share, and download <a href="https://www.inductiveautomation.com/exchange/">community made Ignition resources</a> in collaboration with your organization or the Ignition community. 
+         Discover, share, and download <a href="https://www.inductiveautomation.com/exchange/">community-made Ignition resources</a> in collaboration with your organization or the Ignition community. 
       </>
     ),
   },
   {
-    title: 'Module Development Forums',
+    title: 'Module Development Forum',
     Svg: require('@site/static/img/Logo-InductiveConversations-IconOnly.svg').default,
     description: (
       <>
-         Connect with other community developers <a href="https://forum.inductiveautomation.com/c/module-development/7">on the Ignition Module Develpment Forum</a>  
+         Connect with other community developers <a href="https://forum.inductiveautomation.com/c/module-development/7">on the Ignition Module Development Forum.</a>  
       </>
     ),
   },

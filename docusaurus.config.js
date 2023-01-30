@@ -72,20 +72,30 @@ const config = {
           },
            {to: '/blog', label: 'How-to Articles', position: 'left'},
           {
-            href: 'https://forum.inductiveautomation.com/',
-            label: 'Forums',
-            position: 'right'
-          }, 
-          {
-            href: 'https://support.inductiveautomation.com/hc/en-us',
-            label: 'Support',
-            position: 'right'
-          },         
-          {
-            href: 'https://inductiveuniversity.com/', 
-            label: 'Inductive University', 
-            position: 'right'
+            href: 'https://github.com/inductiveautomation/ignition-sdk-examples',
+            label: 'SDK Module Examples',
+            position: 'left',
           },
+//           {
+//            href: 'https://forum.inductiveautomation.com/',
+//            label: 'Forums',
+//            position: 'left'
+//          },
+          {
+            href: 'https://github.com/inductiveautomation/ignition-sdk-examples/wiki/Javadocs-&-Notable-API-Changes',
+            label: 'Javadocs',
+            position: 'left'
+          }, 
+//          {
+//            href: 'https://support.inductiveautomation.com/hc/en-us',
+//            label: 'Support',
+//            position: 'right'
+//          },         
+//          {
+//            href: 'https://inductiveuniversity.com/', 
+//            label: 'Inductive University', 
+//            position: 'right'
+//          },
           {
             href: 'https://github.com/inductiveautomation',
             label: 'GitHub',
