@@ -61,7 +61,7 @@ const config = {
         title: "Ignition SDK Programmer's Guide",
         logo: {
           alt: 'My Site Logo',
-          src: 'img/Logo-IA-Gear.svg',
+          src: 'img/Logo-IA-Gear-Inverse.svg',
         },
         items: [
           {
