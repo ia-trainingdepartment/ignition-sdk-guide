@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: "Ignition SDK Programmer's Guide",
   tagline: 'Develop Ignition Modules using the Ignition Module SDK',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://main.d2jv2u93hgjlfb.amplifyapp.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
