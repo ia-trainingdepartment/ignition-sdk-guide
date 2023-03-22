@@ -8,10 +8,10 @@ backend:
 frontend:
   phases:
     preBuild:
-      commands:
+      commands:cd
         - npm install
     build:
-      commands:
+      commands:cd
         - npm run build
   artifacts:
     baseDirectory: build
