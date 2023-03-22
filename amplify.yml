@@ -11,7 +11,7 @@ frontend:
       commands:
         - npm install
     build:
-      commands:cd
+      commands:
         - npm run build
   artifacts:
     baseDirectory: build
