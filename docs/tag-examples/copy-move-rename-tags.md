@@ -8,7 +8,7 @@ private void copyMoveRenameTag() throws Exception {
     IgnitionGateway context = IgnitionGateway.get();
     GatewayTagManager tagManager = context.getTagManager();
  
-    // We are going thru the GatewayTagManager rather than a specific tag provider, so we must add the provider name
+    // We are going through the GatewayTagManager rather than a specific tag provider, so we must add the provider name
     // to the front of the path.
     TagPath memoryTag1 = TagPathParser.parse("[default]LevelOne_FolderA/MemoryTag1");
     TagPath destination = TagPathParser.parse("[default]LevelOne_FolderA");

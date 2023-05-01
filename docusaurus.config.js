@@ -53,6 +53,21 @@ const config = {
     ],
   ],
 
+  //plugins: [ 
+  //  [
+  //    '@docusaurus/plugin-content-docs', 
+  //    {
+  //      id: 'ignition',
+  //      path: 'test',
+  //      routeBasePath: 'docs',
+  //      sidebarPath: require.resolve('./sidebars.js'),
+//
+//      }
+//
+//    ]
+//
+ // ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
