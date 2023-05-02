@@ -10,6 +10,7 @@ const config = {
   tagline: 'Develop Ignition Modules using the Ignition Module SDK',
   url: 'https://main.d2jv2u93hgjlfb.amplifyapp.com',
   baseUrl: '/',
+  noIndex: true,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
