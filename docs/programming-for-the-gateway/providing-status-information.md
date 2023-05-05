@@ -52,3 +52,30 @@ When installing this example module for the first time, the above steps must be 
 ---
 
 Webpack transpiles this React source code into a javascript file which is located in `hce-gateway/src/main/resources/mounted/js`. That transpiled javascript is what is ultimately mounted and served by Ignition.
+
+## Status Panels
+
+Status panels are similar to the homepage panels in how they're created and delivered, but are shown on the status page. They are suitable for showing in-depth information that would be appropriate for troubleshooting and performance monitoring. They are implemented through the INamedTab interface, though you would extend the AbstractNamedTab class.
+
+**Using Wicket to Create a React Component Code Example**
+
+```JSON
+private static final INamedTab HCE_STATUS_PAGE = new AbstractNamedTab(
+            "homeconnect",
+            StatusCategories.SYSTEMS,
+            "HomeConnect.nav.status.header") {
+
+
+        @Override
+        public WebMarkupContainer getPanel(String panelId) {
+            // We've set  GatewayHook.getMountPathAlias() to return hce, so we need to use that alias here.
+            return new BasicReactPanel(panelId, "/res/hce/js/homeconnectstatus.js", "homeconnectstatus");
+            }
+
+```
+
+## System Map Components
+
+The system map is a visual representation of the full system. It allows users to see at a glance the overall state, and is shared with redundant nodes in order to provide a complete overview.
+
+To add components to the system map, the module should implement the `updateSystemMap(SystemMap)` function in the `GatewayModuleHook`. This function is called each time the map should be updated, and the module will create a `SystemMapElement` to add to the map provided to the function. Actual status information is added in the form of "StatusItems" on the `SystemMapElement`. In other words, a `SystemMap` consists of multiple `SystemMapElements`, each with multiple `StatusItems`.
