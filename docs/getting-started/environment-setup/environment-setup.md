@@ -1,6 +1,7 @@
 ---
 title: Environment Setup
 sidebar_position: 1
+description: Download the tools you'll need to build your own Ignition modules.
 ---
 
 import Tabs from '@theme/Tabs';
