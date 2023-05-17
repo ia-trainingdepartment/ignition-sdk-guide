@@ -1,6 +1,6 @@
 ---
 title: Scopes, Hooks, and Contexts
-sidebar_position: 3
+sidebar_position: 4
 ---
 ## Scopes
 Ignition defines three different **scopes**: the gateway, the designer, and the client. A module may include pieces for multiple scopes, and resources in a module can be assigned to multiple scopes at once.
@@ -14,7 +14,7 @@ There are three interfaces that define the hooks that correspond to the scopes:
 * `DesignerModuleHook`
 * `ClientModuleHook`
 
-Each module hook must be defined in the module descriptor file.
+Each module hook must be defined in the [module descriptor](/docs/getting-started/anatomy-of-a-module/the-modulexml-file.md) file.
 
 :::tip
 You don't need to create these hooks from scratch if you generate your project from the Ignition plugins for Gradle or Maven. Refer back to [Create a Module](/docs/getting-started/create-a-module/create-a-module.md) and follow the prompts to define your scopes.
