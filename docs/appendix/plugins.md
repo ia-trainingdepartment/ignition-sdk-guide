@@ -1,14 +1,10 @@
 ---
-title: Build a Module
-sidebar_position: 2
+title: Plugins Reference
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-An Ignition Module consists of an xml manifest, jar files, and additional resources and meta-information. When you [create a module](create-a-module.md) from an existing `gradlew.bat` or Maven Archetype, your project will have a `build` directory with the basic tools necessary to compile and build a `.modl` file. Depending on your build system, you may want to further edit the files in your `build` directory to declare dependencies, update signing settings, or configure tasks. See the [Plugins](#plugins) section for configuration settings specific to your build system.
-
-## Compile and Build
-When you are ready to build your `.modl` file, open a command prompt in your project's root directory and run the following command:
+This section details configuration settings for the Gradle and Maven Ignition SDK plugins. If you [created your project](/docs/getting-started/create-a-module/create-a-module.md) using a plugin, most of these settings will already be configured for you.
 
 <Tabs
     values={[
@@ -17,48 +13,7 @@ When you are ready to build your `.modl` file, open a command prompt in your pro
     ]}>
 <TabItem value="gradle"><MDXLayout>
 
-```
-gradlew.bat clean build
-```
-</MDXLayout>
-</TabItem>
-<TabItem value="maven">
-<MDXLayout>
-
-```
-mvn package
-```
-</MDXLayout></TabItem>
-</Tabs>
-
-You now have a `.modl` file that is ready to install on an Ignition Gateway. 
-
-:::tip
-If you have not yet [signed your module](/docs/getting-started/create-a-module/module-signing.md), you will need to either sign it or configure your Gateway to allow unsigned modules. To allow unsigned modules, open the `ignition.conf` file in the `data/` directory, then in the `wrapper.java.additional` section add a line like: 
-
-```
-wrapper.java.additional.[index]=-Dignition.allowunsignedmodules=true 
-```
-:::
-
-
-Your IDE may also provide a GUI interface to compile and build your project, if you prefer. See the documentation for your preferred IDE: 
-
-[IntelliJ IDEA](https://www.jetbrains.com/help/idea/compiling-applications.html)
-
-[Eclipse](https://www.ibm.com/docs/en/elms/esdr/9.0.1?topic=eclipse-building-projects)
-
-
-## Plugins
-
-<Tabs
-    values={[
-        {label: 'Gradle', value: 'gradle'},
-        {label: 'Maven', value: 'maven'},
-    ]}>
-<TabItem value="gradle"><MDXLayout>
-
-The Ignition Module Plugin for Gradle lets module developers use the [Gradle](https://www.gradle.org) build tool to create and sign functional modules (_.modl_ ) through a convenient DSL-based configuration model.
+The Ignition Module Plugin for Gradle lets module developers use the [Gradle](https://www.gradle.org) build tool to create and sign functional modules through a convenient DSL-based configuration model.
 
 This plugin is applied to a single project (the 'root' of the module) that may or may not have child projects. When the plugin is applied, it will attempt to identify if the root or any subprojects apply the `java-library` plugin. For each that does, it will add the `modlApi` and `modlImplementation` configurations so that they may be used in the project's dependency settings. In addition, it will create the asset collection tasks and bind them to the `_ assemble_` lifecycle tasks, and ultimately establish task dependencies for the 'root-specific' tasks that create the module xml, copy files into the appropriate structure, zip the folder into an unsigned modl file, sign it, and report the result.
 
