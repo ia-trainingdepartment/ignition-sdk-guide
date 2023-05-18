@@ -5,22 +5,22 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'SDK Guide',
-    Svg: require('@site/static/img/Logo-IA-Gear.svg').default,
+    Svg: require('@site/static/img/Logo-IgnitionDesigner-Check.svg').default,
     description: (
       <>
         Learn how to use the <a href="docs/intro">Ignition Software Development Kit</a> to build your own modules.
       </>
     ),
   },
-  {
-    title: 'Inductive University Course',
-    Svg: require('@site/static/img/Logo-IU-IconOnly.svg').default,
-    description: (
-      <>
-        Take our <a href="https://inductiveuniversity.com/">Inductive University course</a> to learn about the parts that make up a <code>.modl</code> file and get started with a simple first project.
-      </>
-    ),
-  },
+ // {
+  //  title: 'Inductive University Course',
+  //  Svg: require('@site/static/img/Logo-IU-IconOnly.svg').default,
+  //  description: (
+  //    <>
+  //      Take our <a href="https://inductiveuniversity.com/">Inductive University course</a> to learn about the parts that make up a <code>.modl</code> file and get started with a simple first project.
+  //    </>
+  //  ),
+ // },
   {
     title: 'Module Examples',
     Svg: require('@site/static/img/github-mark.svg').default,

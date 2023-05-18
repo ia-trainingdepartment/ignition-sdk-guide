@@ -9,10 +9,13 @@ The Designer hook class of a module that adds Vision module properties has two m
 
 To get the Palette, you'll need to implement the Vision module's `VisionDesignerInterface`. You can do this through the `DesignerContext`. Once you have the `VisionDesignerInterface`, you can get the palette and make your own `PaletteItemGroup`. You'll add all of your components to this item group.
 
-```js Example
+```js title=MyModuleDesignerHook.java
 public class MyModuleDesignerHook extends AbstractDesignerModuleHook {
     public void startup(DesignerContext context, LicenseState activationState) throws Exception {
+        // Add the BeanInfo package to the search path:
         context.addBeanInfoSearchPath("com.example.mymodule.beaninfos");
+
+        // Add the component to its own palette:
         VisionDesignerInterface sdk = (VisionDesignerInterface) context.getModule(VisionDesignerInterface.VISION_MODULE_ID);
         if (sdk != null) {
             Palette palette = sdk.getPalette();

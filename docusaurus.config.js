@@ -37,8 +37,8 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/ia-trainingdepartment/ignition-sdk-guide',
+          // editUrl:
+          //  'https://github.com/ia-trainingdepartment/ignition-sdk-guide',
         },
         blog: {
           showReadingTime: true,
@@ -86,10 +86,10 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-           {to: '/blog', label: 'How-to Articles', position: 'left'},
+          // {to: '/blog', label: 'How-to Articles', position: 'left'},
           {
             href: 'https://github.com/inductiveautomation/ignition-sdk-examples',
-            label: 'SDK Module Examples',
+            label: 'Example Modules',
             position: 'left',
           },
 //           {

@@ -1,6 +1,7 @@
 ---
 title: Create a Module
 sidebar_position: 3
+description: Create a blank module from a template.
 ---
 Creating a basic module from scratch is not difficult, but we've tried to minimize startup friction by offering you some tools to help get started. Whether you use Gradle or Maven, you can utilize the provided build tools to generate a new project with a framework that includes the basic structure necessary for your module.
 

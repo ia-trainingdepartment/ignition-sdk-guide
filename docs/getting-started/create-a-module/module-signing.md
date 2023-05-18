@@ -1,5 +1,6 @@
 ---
-title: Module Signing
+title: Sign a Module
+sidebar_position: 3
 ---
 After building a module for Ignition it must be signed before it can be installed on a system that is not in developer mode.
 
