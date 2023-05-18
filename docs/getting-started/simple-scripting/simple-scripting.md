@@ -9,6 +9,14 @@ In a [client scope](/docs/programming-for-the-client/programming-for-the-client.
 
 In this tutorial, you'll examine some of the classes that make this function work. Next, you'll add your own function to the `AbstractScriptModule` class provided by the example.
 
+## Prerequisites
+* Set up your [development environment](/docs/getting-started/environment-setup/environment-setup.md).
+* For development convenience, you may want to allow unsigned modules. Open the `ignition.conf` file in the `data/` directory, then in the `wrapper.java.additional` section add a line like: 
+
+```
+wrapper.java.additional.[index]=-Dignition.allowunsignedmodules=true 
+```
+
 ## Getting Started
 Once you have configured your developer gateway, make sure git is installed and clone this repo to a directory of your choice: 
 ```

@@ -1,6 +1,6 @@
 ---
 title: Add a Function
-sidebar_position: 3
+sidebar_position: 4
 ---
 In the initial example, the `multiply()` function is defined under the `AbstractScriptModule` class. Let's add a simple function after line 27:
 
@@ -40,7 +40,7 @@ multiply.param.arg1=The second operand.
 multiply.returns=Returns the first operand multiplied by the second.
 ```
 
-The notation here is somewhat obvious but in the interest of clarity:
+The notation here is the following:
 
 - `desc` is the description of the function
 - `param.%argName%` is the description for a particular argument
