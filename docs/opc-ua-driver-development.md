@@ -19,7 +19,7 @@ The DeviceType class is one of the base extension point type classes from which 
 
 ### Create a Gateway Module Hook
 
-It's recommended to utilize the partial implementation of a driver's GatewayModuleHook in the [AbstractDeviceModuleHook](https://github.com/inductiveautomation/ignition-sdk-examples/blob/master/opc-ua-device/opc-ua-device-gateway/src/main/java/com/inductiveautomation/ignition/examples/tagdriver/ModuleHook.java). This class takes care of all the details for registering and unregistering. Subclasses only need to provide a List<DeviceType> to register. 
+It's recommended to utilize the partial implementation of a driver's GatewayModuleHook in the [AbstractDeviceModuleHook](https://github.com/inductiveautomation/ignition-sdk-examples/blob/master/opc-ua-device/opc-ua-device-gateway/src/main/java/com/inductiveautomation/ignition/examples/tagdriver/ModuleHook.java). This class takes care of all the details for registering and unregistering. Subclasses only need to provide a `List<DeviceType>` to register. 
 
 Creating a Gateway Module Hook will also allow you to register your driver with the Driver Manager, and enforce licensing and API version compatibility.
 
