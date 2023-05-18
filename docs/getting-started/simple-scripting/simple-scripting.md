@@ -7,18 +7,18 @@ sidebar_position: 4
 This module (`scripting-function-g`) provides a basic example of a scripting function that executes through a remote procedure call (RPC).
 In a [client scope](/docs/programming-for-the-client/programming-for-the-client.md), the function delegates to the module's RPC handler, which then calls `multiply` on the gateway and returns the result.
 
-In this tutorial, you'll examine some of the classes that make this function work. Next, you'll add your own function to the `AbstractScriptModule` class provided by the example.
+In this tutorial, you'll examine some of the classes that make this function work before installing the example module onto your own Gateway. Next, you'll add your own function to the `AbstractScriptModule` class provided by the example.
 
 ## Prerequisites
-* Set up your [development environment](/docs/getting-started/environment-setup/environment-setup.md).
-* For development convenience, you may want to allow unsigned modules. Open the `ignition.conf` file in the `data/` directory, then in the `wrapper.java.additional` section add a line like: 
+* Set up your [development environment](/docs/getting-started/environment-setup/environment-setup.md). Since this example uses **Gradle**, follow the steps to install Gradle.
+* Configure Ignition to allow unsigned modules. Open the `ignition.conf` file in the `data/` directory, then in the `wrapper.java.additional` section add a line like: 
 
 ```
 wrapper.java.additional.[index]=-Dignition.allowunsignedmodules=true 
 ```
 
 ## Getting Started
-Once you have configured your developer gateway, make sure git is installed and clone this repo to a directory of your choice: 
+Once you have configured your developer Gateway, make sure git is installed and clone this repo to a directory of your choice: 
 ```
 git clone https://github.com/inductiveautomation/ignition-sdk-training.git
 ```
