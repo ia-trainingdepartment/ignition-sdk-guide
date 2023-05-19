@@ -16,11 +16,11 @@ You can obtain a **Logger** by calling the static `LogManager.getLogger` functio
 
 The class method uses the full path of the class. The name method allows you to use any name you'd like. For example:
 
-```
+```js title=GatewayHook.java
 Logger log = LogManager.getLogger(getClass()); log.info("System started.");
 ```
 or
-```
+```js title=GatewayHook.java
 Logger log = LogManager.getLogger("MyModule.CoreSystem.Status")
 ```
 
@@ -38,24 +38,24 @@ Logging information is an art, and one that is difficult to perfect. There are a
 For example, if you have a logger in a driver and write "Device connected", it will be of little use- multiple instances of a driver might be running at once, and the message does not indicate which instance it is referring to.
 
 #### Log messages set to Info and above should not "flood the log."
-That is, log messages should not report very frequently, making it impossible to see other logs, or filling up the allocated buffer quickly. There are several strategies for avoiding this, such as logging once, and then logging subsequent messages on Debug for a period of time, or only logging the first event, and then making the status easily visible in the gateway or designer.
+That is, log messages should not report very frequently, making it impossible to see other logs, or filling up the allocated buffer quickly. There are several strategies for avoiding this, such as logging once, and then logging subsequent messages on **Debug** for a period of time, or only logging the first event, and then making the status easily visible in the gateway or designer.
 
 #### Log messages involving an exception should always include a custom message, in addition to the exception object. 
 If only the exception object is provided, some appenders will not store the stack trace, making troubleshooting very difficult.
 
-## Severities
+### Severities
 The use of severities is ultimately up to you, but here is a general guideline:
 
-### Error
+#### Error
 An error in the system, usually based on some sort of exception, that is unusual, and usually should be reviewed by somebody.
 
-### Warning
+#### Warning
 Like error, an unusual event that should likely be reviewed. May indicate that something is not quite correct, but is not necessarily preventing correct operation.
 
-### Info
+#### Info
 Standard messages indicating a change of state, or anything else that might be beneficial for the user to know.
 
-### Debug
+#### Debug
 Information used for troubleshooting, perhaps logged repeatedly or more frequently, provides technical information that might only make sense to a trained user or you, the developer.
 
 ### Trace
