@@ -3,7 +3,7 @@ title: OPC UA Driver Development
 sidebar_position: 3
 ---
 
-The OPC UA server provided by Ignition is in itself modular and supports extension through the Device API system. With the API, you can create new drivers that pull data from any source, and expose it through OPC UA, without having to worry about the details of the OPC UA specification. Any compliant OPC UA client will then be able to consume the provided data. 
+The OPC UA server provided by Ignition is in itself modular and supports extension through the Device API system. With the API, you can create new drivers that pull data from any source and expose it through OPC UA. Any compliant OPC UA client will then be able to consume the provided data. 
 
 Developing a driver can be somewhat involved, but there are a variety of useful base classes that cover some common scenarios. See the [OPC UA device example](https://github.com/inductiveautomation/ignition-sdk-examples/tree/master/opc-ua-device) for more details. 
 
