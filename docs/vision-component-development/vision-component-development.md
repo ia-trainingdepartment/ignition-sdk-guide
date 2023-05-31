@@ -7,7 +7,7 @@ One of the easiest types of modules to write is a module that adds a new compone
 A basic module that adds components to the Vision module will need two projects: one for the Client scope and one for the Designer scope. You do not need a project for the Gateway scope unless your components are part of a larger module that requires Gateway-scoped resources. 
 
 ## Client Scope
-In your Client scope project you'll have all of your components defined. You don't strictly need a Client module hook class at all. Your components will get compiled into a `.jar` file that will be marked in your `module.xml` file as "DC" for designer and Client scoped:
+In your Client scope project you'll have all of your components defined. You don't strictly need a Client module hook class at all. Your components will get compiled into a `.jar` file that will be marked in your `module.xml` file as "DC" for Designer and Client scoped:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

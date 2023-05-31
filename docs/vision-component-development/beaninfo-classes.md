@@ -9,7 +9,7 @@ BeanInfo classes are located using a combination of naming conventions and expli
 
 BeanInfo classes must always be named the same as the component they describe, with "BeanInfo" appended to the end. For example, if your component is called `MyGreatChart`, your BeanInfo class for that component would be named `MyGreatChartBeanInfo`.
 
-Typically, you'll have all of your BeanInfo classes residing in a single package in your Designer-scoped project. For example, let's say that package is `com.example.mymodule.beaninfos`. Using your module's Designer Hook class, you can add that package name to the Vision module's BeanInfo search path:
+Typically, you'll have all of your BeanInfo classes residing in a single package in your Designer-scoped project. For example, let's say that package is `com.example.mymodule.beaninfos`. Using your module's Designer hook class, you can add that package name to the Vision module's BeanInfo search path:
 ```js title=MyModuleDesignerHook.java
 public class MyModuleDesignerHook extends AbstractDesignerModuleHook {
 

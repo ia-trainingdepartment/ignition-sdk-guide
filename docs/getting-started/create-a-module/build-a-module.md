@@ -33,19 +33,17 @@ mvn package
 
 You now have a `.modl` file that is ready to install on an Ignition Gateway. 
 
-:::tip
-If you have not yet [signed your module](/docs/getting-started/create-a-module/module-signing.md), you will need to either sign it or configure your Gateway to allow unsigned modules. To allow unsigned modules, open the `ignition.conf` file in the `data/` directory, then in the `wrapper.java.additional` section add a line like: 
-
-```
-wrapper.java.additional.[index]=-Dignition.allowunsignedmodules=true 
-```
-:::
-
-
 Your IDE may also provide a GUI interface to compile and build your project, if you prefer. See the documentation for your preferred IDE: 
 
 [IntelliJ IDEA](https://www.jetbrains.com/help/idea/compiling-applications.html)
 
 [Eclipse](https://www.ibm.com/docs/en/elms/esdr/9.0.1?topic=eclipse-building-projects)
+
+
+:::tip
+If you have not yet [signed your module](/docs/getting-started/create-a-module/module-signing.md), you will need to either sign it or configure your Gateway to allow unsigned modules.
+:::
+
+
 
 
