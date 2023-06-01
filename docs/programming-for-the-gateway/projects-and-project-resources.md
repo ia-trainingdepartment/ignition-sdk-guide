@@ -1,6 +1,6 @@
 ---
 title: Projects and Project Resources
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 Beyond system-wide configuration data, the most common data used by modules is project-based resource data. Project resources are usually created through the Designer and are identified by their **resource type** and **module id**. When a module defines a new project resource, it will define the resource type. 

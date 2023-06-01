@@ -1,6 +1,6 @@
 ---
 title: Providing Status Information
-sidebar_position: 3
+sidebar_position: 1
 ---
 
 Most modules that operate in the gateway scope are long running, and therefore should provide easy access to status information. There are a variety of ways to provide status in Ignition, and the requirements of your module will dictate which, or which combination, you use.

@@ -1,7 +1,8 @@
 ---
 title: Exposing Data to the System
-sidebar_position: 3
+sidebar_position: 7
 ---
+
 Many modules, in one way or another, generate data that should be exposed to the rest of the system. In fact, in many cases, this is the very purpose of the module: to communicate with some device or source, and expose the data. In other cases, you might have statistical or diagnostic information you want to make available. In all cases, you likely want to allow the user to take advantage of standard platform features like alerting, history, etc.
 
 ## Exposing Data Through OPC-UA
@@ -42,12 +43,14 @@ The SimpleTagProvider is a helper class that is designed to let you expose data 
 Creating a custom provider with the SimpleTagProvider is as easy as instantiating the class and calling startup(). After that, you can call updateValue() to implicitly create a tag, and set its value. Any time you want the value to change, just call updateValue again:
 
 ```JSON
-SimpleTagProvider provider = new SimpleTagProvider("MyProvider"); //gatewayContext will come from the scope that we're in- for example, from the startup function of our module
+SimpleTagProvider provider = new SimpleTagProvider("MyProvider"); 
+//gatewayContext will come from the scope that we're in- for example, from the startup function of our module
 ```
 
 ```JSON
 provider.startup(gatewayContext);
-//This will create the tag,and set the value to the current time. provider.updateValue("StartupTime", new Date(),DataQuality.GOOD_DATA);
+//This will create the tag,and set the value to the current time. 
+provider.updateValue("StartupTime", new Date(),DataQuality.GOOD_DATA);
 ```
 
 That's it! In the Designer, you'll now find a new provider called "MyProvider" (under the "All Providers" folder), with the tag and startup time value. At this point, however, the tag will not be editable, and the user will not be allowed to alert, historize, etc.
@@ -58,7 +61,8 @@ The range of features that the tags in the SimpleTagProvider are allowed to use 
 This example will enable all of the standard features on our "StartupTime" tag:
 
 ```JSON
-ExtendedTagType ourType = new CustomTagType(0); provider.configureTagType(ourType, TagEditingFlags.STANDARD_STATUS, null);
+ExtendedTagType ourType = new CustomTagType(0); 
+provider.configureTagType(ourType, TagEditingFlags.STANDARD_STATUS, null);
 provider.configureTag("StartupTime", DataType.DateTime, ourType);
 ```
 

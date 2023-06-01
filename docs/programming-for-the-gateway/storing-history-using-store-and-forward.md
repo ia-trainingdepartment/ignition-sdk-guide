@@ -1,6 +1,6 @@
 ---
 title: Storing History Using Store and Forward
-sidebar_position: 3
+sidebar_position: 6
 ---
 
 The store and forward system works as a pipeline to deliver data reliably to the database. The database is a data sink, and data is buffered in the store and forward engine using a mixture of memory and disk storage, until it can be delivered. If the data results in an error, it is quarantined in order to allow other data to pass. While it is buffered, it may be combined with similar data, in order to improve efficiency by writing in bulk transactions instead of individual units.

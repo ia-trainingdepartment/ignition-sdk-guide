@@ -2,6 +2,7 @@
 title: Programming for the Gateway
 sidebar_position: 4
 ---
+
 ## Getting Started - The Module Hook
 The first step to creating a gateway scoped module is to create a GatewayModuleHook. This interface defines all of the functions that Ignition expects a module entry point to have. 
 

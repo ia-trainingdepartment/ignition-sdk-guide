@@ -1,6 +1,6 @@
 ---
 title: Storing Data with PersistentRecords
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 The PersistentRecord class is your entrypoint to  storing and retrieving data in the internal database system. As described in the **Key Design Concepts** > **Storing Configuration Data**, you don’t need to worry about replicating data to redundant nodes, writing raw SQL queries, or maintaining tables. Additionally, the PersistentRecord offers convenient methods for listening to record changes.
