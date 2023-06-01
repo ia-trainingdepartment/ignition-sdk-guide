@@ -24,7 +24,7 @@ This scripting module will now appear at the bottom of your Modules page, under 
 
 You can now launch a Designer and test out the scripting function we added. Open a **Script Console** and enter the following:
 
-```python title="Multiply some numbers"
+```python title="Multiply function example"
 print system.example.multiply(6, 7)
 ```
 Congratulations, you've just added a simple scripting function to Ignition!

@@ -52,5 +52,4 @@ Our function does not accept any arguments, so we only have two entries to add t
 helloWorld.desc=Returns a friendly greeting
 helloWorld.returns=The string "Hi There!"
 ```
-Build the module, install the new module on top of the old, relaunch the designer, and check the autocomplete popup.
- You should see your new descriptions. 
+Build the module, upgrade the module on the Gateway, relaunch the Designer, and check the autocomplete popup. You should see your new descriptions. 

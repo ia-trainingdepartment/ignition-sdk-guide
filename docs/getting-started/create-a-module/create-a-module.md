@@ -48,7 +48,7 @@ Once you have the module tools in hand you can generate a new project through th
   gradlew.bat  runCli -–console plain
   ```
 
-You will be prompted to enter the following information:
+5. Fill in the following information when prompted:
 
 | Prompt | Description | Example |
 |--------|-------------|---------|
@@ -58,13 +58,15 @@ You will be prompted to enter the following information:
 | Language: | Language for gradle buildscripts. Possible values are `kotlin` and `groovy`. Default: `kotlin`. | `kotlin` |
 
 This will create a new project structure for you with seperate directories for each of the Gateway, Designer and Client scopes, as well as a Common and Build directory. If you receive a `BUILD SUCCESSFUL` message, you can close the command prompt and open your new project in your preferred IDE:
+
+
 ![IntelliJ IDE with New SDK Project open](new-sdk-project.jpg)
  
   </TabItem>
 
   <TabItem value="maven" label="Maven">
 
-The fastest way to get started with a new Ignition module using Maven is to use a **Maven Archetype**. An archetype is a pre-made structural framework for a Maven project. Your new module will have directories in place, be configured to use the `ignition-maven-plugin` described below, and will be ready for you to start adding your own source. 
+The fastest way to get started with a new Ignition module using Maven is to use a **Maven Archetype**. An archetype is a pre-made structural framework for a Maven project. Your new module will have directories in place, be configured to use the `ignition-maven-plugin` described below, and be ready for you to add your own source. 
 
 With Maven installed, enter the following in the command line:
 ```

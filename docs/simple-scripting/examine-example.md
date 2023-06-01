@@ -5,7 +5,7 @@ sidebar_position: 2
 Let's examine some pieces of the example module to see how they interact to create a scripting function.
 
 :::note
-This is not an exhaustive list of every file or class required to make this example work, but rather a few selected highlights. We encourage you to examine the other directories included in this example project as well to see how they all fit together.
+This is not an exhaustive list of every file or class required to make this example work. We encourage you to examine the other directories included in this example project  to see how they all fit together.
 :::
 
 ## `common`
@@ -50,7 +50,7 @@ public ClientScriptModule() {
         );
     }
 ```
-The `ModuleRPCFactory` handles the "heavy lifting" of passing values back and forth between scopes.
+The `ModuleRPCFactory` handles passing values back and forth between scopes.
 
 ## `GatewayScriptModule`
 
