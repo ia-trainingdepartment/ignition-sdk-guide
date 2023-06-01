@@ -1,6 +1,6 @@
 ---
 title: Extending Ignition with Extension Points
-sidebar_position: 3
+sidebar_position: 5
 ---
 
 As described in the Extension Points section of the Getting Started > Key Design Concepts, extension points are hooks that allow modules to implement new versions of abstract ideas, such as a new type of authentication profile or a new alarm journal.
@@ -51,10 +51,3 @@ At a high level, the process for creating a new extension point implementation i
 4. Register the extension point with the appropriate manager.
 
     The final task is to actually register the extension point with the system, through the appropriate manager. In the startup() function of your GatewayModuleHook, use the manager specified below to add your type.
-
-#### Extension Point Object Reference Table
-|Extension Point|Interface to Implement|Base extension point type to extend from|Profile record to reference|Manager to register with | 
-|--|--|--|--|--|
-|--|--|--|--|--|
-|--|--|--|--|--|
-|--|--|--|--|--|
