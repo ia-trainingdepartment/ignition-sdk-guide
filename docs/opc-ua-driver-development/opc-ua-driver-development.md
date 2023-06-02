@@ -2,6 +2,8 @@
 title: OPC UA Driver Development
 sidebar_position: 8
 ---
+<!-->In general, I've been using the code format for class names (e.g. in this section, "DeviceType" would have code formatting). I'm leaning toward updating all class names this way to be consistent across the SDK guide, but I'm open to arguments against this. Leaving them alone for now in this doc.<-->
+
 The OPC UA server provided by Ignition is modular and supports extension through the Device API system. With the API, you can create new drivers that pull data from any source and expose it through OPC UA. Any compliant OPC UA client will then be able to consume the provided data.
 
 Developing a driver can be somewhat involved, but there are a variety of useful base classes that cover some common scenarios. See the [OPC UA device example](https://github.com/inductiveautomation/ignition-sdk-examples/tree/master/opc-ua-device) for more details. 
@@ -12,12 +14,14 @@ Developing a driver can be somewhat involved, but there are a variety of useful 
 
 By extending the PersistentRecord class, you can define any configurable properties your driver needs to present to the user, as well as a few pieces of metadata that are displayed in the Ignition Gateway when editing or creating a new device. For reference, some example device settings are encapsulated in [ExampleDeviceSettings](https://github.com/inductiveautomation/ignition-sdk-examples/blob/master/opc-ua-device/opc-ua-device-gateway/src/main/java/com/inductiveautomation/ignition/examples/tagdriver/configuration/settings/ExampleDeviceSettings.java). You can create as many settings as you want, and once created, you can then query the record from the other class to use these settings in meaningful ways for your driver. 
 
+<!-->Format this as a :::note?<-->
 Note that the [valueSimulator](https://github.com/inductiveautomation/ignition-sdk-examples/blob/master/opc-ua-device/opc-ua-device-gateway/src/main/java/com/inductiveautomation/ignition/examples/tagdriver/configuration/ValueSimulator.java) is specific to the provided device example as a way to prove out how updates and communication between the OPC UA server and a driver should function. Your device will have a set of classes to get returns and therefore does not need a simulator. 
 
 ### Define a Device Type
 
 The DeviceType class is one of the base extension point type classes from which all drivers must extend. Defining a device type will allow you to create new device instances, as well as bridge the gap between the Gateway and your driver’s settings.
 
+<!-->User override or useful override? If user is correct, disregard.<-->
 A user override to consider implementing is `getStatus`, which tells the connection what state it should be in. Required state is determined by the developer based on module requirements.
 
 
@@ -32,16 +36,19 @@ Further ModuleHook considerations include `mountRouteHandlers` and `isMakerEditi
 
 ### Implement the DeviceInterface
 
-All OPC-UA drivers must implement the Device interface. This interface defines the basic functionality any driver must provide. Reading and writing apply to most all drivers as core functionality. How your interface is defined for these functions depends on your driver protocol and PLC optimization.  
+All OPC UA drivers must implement the Device interface. This interface defines the basic functionality any driver must provide. Reading and writing apply to most all drivers as core functionality. How your interface is defined for these functions depends on your driver protocol and PLC optimization.  
 
-Other functionality like browsing, subscription management, and life cycle/state management and further dependent on PLC support. For example, some devices require users to manually input requests instead of allowing browsing capabilities. Browsing in this context refers to sending device requests.
+Other functionality like browsing, subscription management, and life cycle/state management depends on PLC support. For example, some devices require users to manually input requests instead of allowing browsing capabilities. Browsing in this context refers to sending device requests.
 
 If you are looking to implement subscription management, be mindful that the `SubscriptionModel` needs to be overridden by the developer to work properly. The typical setup has the OPC UA server telling a driver when a tag has been added and is now subscribing at a one second rate. The override in the code enables the module to react through the override to all tag changes provided by the OPC UA server instead. The `SubscriptionModel` setup for the [example device](https://github.com/inductiveautomation/ignition-sdk-examples/blob/master/opc-ua-device/opc-ua-device-gateway/src/main/java/com/inductiveautomation/ignition/examples/tagdriver/ExampleDevice.java) defines how the tags are subscribed, when they update, and the nodes that need to be updated and refreshed.
 
 ### Adding Nodes to the OPC UA Server
 
-The concept of adding a node to the OPC UA server means it is now exposed and browsable. If nodes are not added to the OPC UA server, they will not be recognized by Ignition. The process of how to add nodes is shown in the example device code below:
+<!-- >Removed "the concept of"<-->
+Adding a node to the OPC UA server means it is now exposed and browsable. If nodes are not added to the OPC UA server, they will not be recognized by Ignition. The process of how to add nodes is shown in the example device code below:
   
+```js title="Adding Nodes Example"
+
     private void addDynamicNodes(UaFolderNode rootNode) {
         String name = "dynamic";
         UaFolderNode folder = new UaFolderNode(
@@ -82,3 +89,4 @@ The concept of adding a node to the OPC UA server means it is now exposed and br
         }
     }
 
+```

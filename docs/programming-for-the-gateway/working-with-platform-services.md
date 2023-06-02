@@ -11,10 +11,10 @@ Database access is at the core of Ignition, and is used by many parts of the sys
 
 ### Creating a Connection and Executing Basic Queries
 
-All database operations are handled through the DatasourceManager provided by the GatewayContext. The DatasourceManager allows you to get a list of all defined data sources and open a new connection on them. The returned connection is an SRConnection, which is a subclass of the standard JDBC Connection object that provides a variety of time saving convenience functions. It’s important to remember that even when using the convenience functions the connection must still be closed. The following example illustrates the best practice of wrapping the connection in a try-with-resources block. 
+All database operations are handled through the DatasourceManager provided by the GatewayContext. The DatasourceManager allows you to get a list of all defined data sources and open a new connection on them. The returned connection is an SRConnection, which is a subclass of the standard JDBC Connection object that provides a variety of time saving convenience functions. It’s important to remember that even when using the convenience functions the connection must still be closed. The following example illustrates the best practice of wrapping the connection in a try-with-resources block:
 
-New Connection Example:
-```JSON int maxVal;
+```JS title="New Connection Example"
+int maxVal;
 try (SRConnection con = context.getDatasourceManager().getConnection("myDatasource")) {
     con.runPrepQuery("INSERT INTO example(col) VALUES", 5);
     maxVal = (Integer) con.runScalarQuery("SELECT max(col) FROM example");
@@ -39,8 +39,8 @@ When creating database-centric modules, it is very common to expect a table to e
 
 The class is instantiated with the table name and the datasource provides the database translator to use. Columns are then defined, and finally the state is checked against the given connection. Missing columns can be added later. For example, the following is a common way to define and check a table, creating it if required:
 
-Defining Table Structure Example:
-```JSON try (SRConnection con = context.getDatasourceManager().getConnection("myDatasource")) {
+```JS title="Definine Table Structure Example"
+try (SRConnection con = context.getDatasourceManager().getConnection("myDatasource")) {
     DBTableSchema table = new DBTableSchema("example",con.getParentDatasource().getTranslator());
     table.addRequiredColumn("id", DataType.Int4, EnumSet.of(ColumnProperty.AutoIncrement, ColumnProperty.PrimaryKey));
     table.addRequiredColumn("col", DataType.Int8, null);
@@ -114,17 +114,17 @@ The alarm system provides a great deal of flexibility in querying events and the
 
 However, it is considerably easier to use the ``AlarmFilterBuilder`` helper class, unless you need to define your own type of conditions.
 
-The following example shows how to create a filter that returns all active alarms with priority greater than Low.
+The following example shows how to create a filter that returns all active alarms with priority greater than Low:
 
-```JSON 
+```JS title="Example"
 AlarmFilter filter = new AlarmFilterBuilder().isState(AlarmState.ActiveUnacked, AlarmState.ActiveAcked).priority_gt(AlarmPriority.Low).build(); 
 ```
 
-In addition to conditions, the AlarmFilter also has statically defined flags that affect how queries behave. For example, AlarmFilter.FLAG_INCLUDE_DATA specifies that the associated data of an event should be included in the query. These are applied by using the AlarmFilterBuilder or by modifying the flags object returned by AlarmFilter.getFlags().
+In addition to conditions, the AlarmFilter also has statically defined flags that affect how queries behave. For example, `AlarmFilter.FLAG_INCLUDE_DATA` specifies that the associated data of an event should be included in the query. These are applied by using the AlarmFilterBuilder or by modifying the flags object returned by `AlarmFilter.getFlags()`.
 
 ### Working with AlarmQueryResult
 
-Fundamentally, AlarmQueryResult is simply a list of AlarmEvents. However, additional functions that can be useful include ``getDataset()``, which returns the events as a dataset that can be used with Ignition dataset functions, and ``getAssociatedData()``, which returns the associated data of an event as a dataset. Although the information returned by these two functions can be obtained directly on the alarm events, these functions are useful when datasets are required.
+Fundamentally, AlarmQueryResult is a list of AlarmEvents. However, additional functions that can be useful include ``getDataset()``, which returns the events as a dataset that can be used with Ignition dataset functions, and ``getAssociatedData()``, which returns the associated data of an event as a dataset. Although the information returned by these two functions can be obtained directly on the alarm events, these functions are useful when datasets are required.
 
 ### Creating New Alarms
 
@@ -136,5 +136,6 @@ An alarm configuration is defined by the AlarmConfiguration interface, which hol
 
 Most of the basic alarm properties are defined statically in ``CommonAlarmProperties``. Properties specific to the setpoint/mode are in ``AlarmModeProperties``.
 
-**NOTE:** Once you are done using the alarm, or the source is going to be destroyed, you should call ``AlarmEvaluator.release()`` to unregister the alarms.
- 
+:::tip
+Once you are done using the alarm, or the source is going to be destroyed, you should call ``AlarmEvaluator.release()`` to unregister the alarms.
+:::
