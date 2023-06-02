@@ -20,7 +20,7 @@ Each module hook must be defined in the [module descriptor](/docs/getting-starte
 You don't need to create these hooks from scratch if you generate your project from the Ignition plugins for Gradle or Maven. Refer back to [Create a Module](/docs/getting-started/create-a-module/create-a-module.md) and follow the prompts to define your scopes.
 :::
 
-In practice, it is best to extend from the Abstract implementations of these hooks (for example, `AbstractGatewayModuleHook`) instead of implementing the interfaces yourself. An Abstract class provides empty implementations of the functions, allowing you to implement only what you need. Subclasses extending from the Abstract class define the specific and relevant functions you need. For example, in our [tutorial example](/docs/getting-started/simple-scripting/simple-scripting.md) we extended from the `AbstractGatewayModuleHook` in order to access the `initializeScriptManager()` method: 
+In practice, it is best to extend from the Abstract implementations of these hooks (for example, `AbstractGatewayModuleHook`) instead of implementing the interfaces yourself. An Abstract class provides empty implementations of the functions, allowing you to implement only what you need. Subclasses extending from the Abstract class define the specific and relevant functions you need. For example, in our [tutorial example](/docs/simple-scripting/simple-scripting.md) we extended from the `AbstractGatewayModuleHook` in order to access the `initializeScriptManager()` method: 
 
 ```js title=GatewayHook.java
 public class GatewayHook extends AbstractGatewayModuleHook {
