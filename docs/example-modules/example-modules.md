@@ -12,7 +12,7 @@ This repository demonstrates some of the possible ways you can extend Ignition w
 Open an example in your IDE of choice to explore a project's structure, or try your hand at modifying an example with your own code. 
 
 :::tip
-If you prefer a simpler, guided example, head to the [Tutorial example](/docs/getting-started/simple-scripting/simple-scripting.md) first.
+If you prefer a simpler, guided example, head to the [Tutorial example](/docs/simple-scripting/simple-scripting.md) first.
 :::
 
 ## Prerequisites
