@@ -1,9 +1,10 @@
 ---
 title: Read and Write Tags
 ---
-This code example is intended to be run within Gateway scope, and assumes that the `GatewayContext` object is available. To run from a Designer or client, [see this guide to create an RPC object](/docs/programming-for-the-designer).
+
 
 ```js
+// This code example is Gateway scoped and assumes the `GatewayContext` object is available.
 private void writeReadTagValue() throws Exception {
     IgnitionGateway context = IgnitionGateway.get();
     GatewayTagManager tagManager = context.getTagManager();
