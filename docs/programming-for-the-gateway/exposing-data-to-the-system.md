@@ -28,9 +28,8 @@ Negatives:
 * Users will not be able to create multiple instances of the tags. 
 * The data cannot be used externally, through OPC or External SQLTags*
 
-:::note 
+> **Note:**
 Both of the situations listed under Negative may be possible with 3rd party modules.
-:::
 
 There are two ways to expose data through SQLTags: write your own TagProvider and register it with the SQLTags system, or use the SimpleTagProvider helper class.
 
@@ -38,9 +37,8 @@ There are two ways to expose data through SQLTags: write your own TagProvider an
 
 The SimpleTagProvider is a helper class that is designed to let you expose data through SQLTags with as little difficulty as possible. Its simplicity allows you to expose data extremely quickly, while still allowing a fair amount of flexibility and power. It wraps up the process of creating a custom provider that supports all core SQLTags features (alerting, scaling, history, etc), without requiring any tedious code on your part.
  
-:::note
+> **Note:**
 The features of the SimpleTagProvider are documented in more detail in the JavaDocs for the class, and on the related classes, such as TagEditingFlags. 
-:::
 
 ### Getting Started
 

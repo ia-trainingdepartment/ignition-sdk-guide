@@ -25,8 +25,8 @@ The Ignition platform provides a demo system that dictates 2-hour periods that c
 When a module is activated, the license state provided to it will be updated accordingly, and the `getLicenseMode()` function will return `LicenseMode.Activated`. When the demo is reset, the `isTrialExpired()` function will return `false`. Any change in the properties will cause the `notifyLicenseStateChanged()` function to be called to the module hook.
 
 
-<!--Where is this content? Commenting out this section in the meantime
-## Leased Licensing
+<!-- Commenting out this section in the meantime
+## Leased Licensing (8.3 content > coming soon)
 
 ### What you need to know about leased license:
 

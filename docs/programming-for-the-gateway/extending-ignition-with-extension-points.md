@@ -28,8 +28,7 @@ At a high level, the process for creating a new extension point implementation i
 
 1. Create a class that implements the desired type of object.
 
-    Ultimately, the goal is to provide your own implementation of functionality to some piece of the system before you worry too much about the other scaffolding needed in Ignition. Here is an example implementing a custom alarm notification system. The rest of the Extension Point system is for bookkeeping and linking in your class. The table below specifies which interface to implement for each extension point. 
-    <!-->Where is the table?<-->
+    Ultimately, the goal is to provide your own implementation of functionality to some piece of the system before you worry too much about the other scaffolding needed in Ignition. Here is an example implementing a custom alarm notification system. The rest of the Extension Point system is for bookkeeping and linking in your class. 
 
 2. Define the extension point type.
 
@@ -51,5 +50,5 @@ At a high level, the process for creating a new extension point implementation i
 
 4. Register the extension point with the appropriate manager.
 
-    The final task is to actually register the extension point with the system, through the appropriate manager. In the startup() function of your GatewayModuleHook, use the manager specified below to add your type. 
-    <!-->Specified below, where?<-->
+    The final task is to actually register the extension point with the system, through the appropriate manager. In the startup() function of your GatewayModuleHook, use the manager specified for your extension point type. 
+   
