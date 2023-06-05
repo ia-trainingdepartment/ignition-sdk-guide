@@ -136,6 +136,5 @@ An alarm configuration is defined by the AlarmConfiguration interface, which hol
 
 Most of the basic alarm properties are defined statically in ``CommonAlarmProperties``. Properties specific to the setpoint/mode are in ``AlarmModeProperties``.
 
-:::tip
+**Tip:**
 Once you are done using the alarm, or the source is going to be destroyed, you should call ``AlarmEvaluator.release()`` to unregister the alarms.
-:::
