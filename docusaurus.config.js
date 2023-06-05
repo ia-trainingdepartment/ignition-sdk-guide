@@ -113,7 +113,7 @@ const config = {
 //            position: 'right'
 //          },
           {
-            href: 'https://github.com/inductiveautomation',
+            href: 'https://github.com/ia-trainingdepartment/ignition-sdk-guide',
             label: 'GitHub',
             position: 'right',
           },
@@ -161,7 +161,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/inductiveautomation',
+                href: 'https://github.com/ia-trainingdepartment/ignition-sdk-guide',
               },
             ],
           },
