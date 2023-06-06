@@ -1,6 +1,7 @@
 ---
 title: Logging
 sidebar_position: 1
+draft: true
 ---
 Ignition uses the Apache Log4J framework to record events, errors and debug messages. Log4J is a simple framework that makes it easy to log information, and store those logs in different formats.
 
