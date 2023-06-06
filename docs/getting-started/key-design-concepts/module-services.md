@@ -2,7 +2,7 @@
 title: Module Services
 sidebar_position: 8
 ---
-Module services are a way for modules to provide APIs to other modules, or to implement well-known services in new ways. The `ModuleSerivceManager` (accessed through `GatewayContext`) is a directory of Objects, referenced by their class type. Any module can register a new `ModuleService`, and other modules can subscribe to these types of services and retrieve the registered instance when its available. This allows child modules to get the running instance of a class provided by a parent module.
+Module services are a way for modules to provide APIs to other modules, or to implement well-known services in new ways. The `ModuleSerivcesManager` (accessed through `GatewayContext`) is a directory of Objects, referenced by their class type. Any module can register a new `ModuleService`, and other modules can subscribe to these types of services and retrieve the registered instance when its available. This allows child modules to get the running instance of a class provided by a parent module.
 
 ## Implementing and Registering a Module Service
 To create a module service, a class or interface must extend the empty `ModuleService` marker interface. No other definition is required. This class or interface, however, will need to be located in a project that can be referenced by child modules (such as an `api` or `common` project), as they will be referring to it explicitly to retrieve the implementation. 
