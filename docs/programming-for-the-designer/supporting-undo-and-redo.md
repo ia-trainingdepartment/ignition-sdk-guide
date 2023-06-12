@@ -16,6 +16,7 @@ The `UndoAction` represents a unit of execution that can be performed, reversed 
     - This is the positive action and always means “do this”
 - undo()
     - This is the negative action and the opposite of execute()
+
 Given the semantics of these functions, it’s common to define an UndoAction, call execute(), and then, if successful, add it to the UndoManager. The UndoAction.getDescription() function provides the text that will be displayed to the user. Additionally, this value is used to group similar actions, if appropriate.
 
 ## Grouping Actions
