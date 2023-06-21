@@ -28,7 +28,7 @@ Starts execution of the module. At this point the system is almost fully running
 ### shutdown()
 Called when the platform is shutting down, or the module is being removed/restarted.
 
->Important: You should take special care to remove all resources added by the module to the platform. If any resource is left uncollected, the entire module will remain in memory, leading to a memory leak, which will be particularly troublesome if the module is reloaded several times in one gateway session. 
+>**Important:** You should take special care to remove all resources added by the module to the platform. If any resource is left uncollected, the entire module will remain in memory, leading to a memory leak, which will be particularly troublesome if the module is reloaded several times in one gateway session. 
 
 ```js
 Package com.inductiveautomation.ignition.examples.reporting.datasource.common.gateway;
