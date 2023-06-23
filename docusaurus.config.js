@@ -56,14 +56,14 @@ const config = {
 
   plugins: [ 
    [
-     '@docusaurus/plugin-content-docs', 
-     {
-       id: 'ignition',
-       path: 'test',
-       routeBasePath: 'docs',
-       sidebarPath: require.resolve('./sidebars.js'),
+     //'@docusaurus/plugin-content-docs', 
+     // {
+     //   id: 'ignition',
+     //   path: 'test',
+     //   routeBasePath: 'docs',
+     //   sidebarPath: require.resolve('./sidebars.js'),
 
-     },
+     // },
 
      {
       themes: ['docusaurus-theme-search-typesense'],
