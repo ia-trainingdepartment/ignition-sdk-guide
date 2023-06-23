@@ -13,6 +13,7 @@ frontend:
     build:
       commands:
         - npm run build
+        - npm install docusaurus-theme-search-typesense@next --save
   artifacts:
     baseDirectory: /build
     files:
