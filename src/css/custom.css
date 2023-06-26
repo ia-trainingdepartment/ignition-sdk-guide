@@ -6,7 +6,9 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   --ifm-color-primary: #003e69;
   --ifm-color-primary-dark: #00385e;
   --ifm-color-primary-darker: #003559;
@@ -32,6 +34,11 @@
 
 body {
   color: #39464B;
+}
+
+h0 {
+  font-size: x-large;
+  color: white;
 }
 
 h1 {
