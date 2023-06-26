@@ -3,14 +3,14 @@ title: Logging
 sidebar_position: 1
 draft: true
 ---
-Ignition uses the Apache Log4J framework to record events, errors and debug messages. Log4J is a simple framework that makes it easy to log information, and store those logs in different formats.
+<!--Ignition uses the Apache Log4J framework to record events, errors and debug messages. Log4J is a simple framework that makes it easy to log information, and store those logs in different formats.
 
 ## Introduction to Log4J
 Log4J is a logging system, meaning that information is stored to it, recording what happened in the system. The information is stored to a particular **Logger**, a named entity used to log messages. These messages always contain a **Severity** rating.
 
 **Appenders** in the system receive the messages and do something in response, such as writing them to a text file. Appenders can be configured to only log messages of a certain severity, and at any time we can set the level of severity that a given logger will accept by using that logger's name. 
 
-For example, **trace** severity, which is the lowest level, is usually very verbose, and not logged by default. If we are trying to troubleshoot a particular part of the system and we know which logger it uses, we can turn on trace logging for that logger in order to see all of its information.
+For example, **trace** severity, which is the lowest level, is usually very verbose, and not logged by default. If we are trying to troubleshoot a particular part of the system and we know which logger it uses, we can turn on trace logging for that logger in order to see all of its information.-->
 
 ## Getting a Logger
 You can obtain a **Logger** by calling the static `LogManager.getLogger` functions. There are two primary methods used to get loggers: class and name. 

@@ -12,11 +12,12 @@
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 4rem;
   }
 }
 
 .buttons {
+  color: #F7901E;
   display: flex;
   align-items: center;
   justify-content: center;
