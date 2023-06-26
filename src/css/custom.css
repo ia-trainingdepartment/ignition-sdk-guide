@@ -38,6 +38,10 @@ h2 {
 h3 {
   color: var(--ifm-color-primary-lightest)
 }
+
+body {
+  color: #39464B;
+}
 table {
   table-layout: fixed;
   width: 100%;
