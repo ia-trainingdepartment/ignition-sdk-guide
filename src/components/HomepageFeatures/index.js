@@ -32,7 +32,7 @@ const FeatureList = [
   },
   {
     title: 'Ignition Module Development Community',
-    Svg: require('@site/static/img/SDK-Guide-Icon.svg').default,
+    Svg: require('@site/static/img/Ignition-Module-Development-Community-Icon.svg').default,
     description: (
       <>
          Join <a href="https://github.com/IgnitionModuleDevelopmentCommunity">the open source community</a> for Ignition module development.
