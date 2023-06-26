@@ -30,13 +30,20 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+body {
+  color: #39464B;
+}
+
+h1 {
+  color: #445C6D;
+}
 
 h2 {
   color: #f7901e;
 }
 
 h3 {
-  color: var(--ifm-color-primary-lightest)
+  color: #445C6D;
 }
 table {
   table-layout: fixed;
@@ -46,6 +53,7 @@ table {
 }
 
 a {
+  color: #4A90AD;
   font-weight: 600;
 }
 
