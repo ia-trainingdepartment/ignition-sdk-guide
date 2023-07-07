@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: "Ignition SDK Programmer's Guide",
   tagline: 'Develop Ignition Modules using the Ignition Module SDK',
-  url: 'https://main.d2jv2u93hgjlfb.amplifyapp.com',
+  url: 'https://www.sdk-docs.inductiveautomation.com/',
   baseUrl: '/',
   noIndex: true,
   onBrokenLinks: 'throw',
@@ -44,8 +44,8 @@ const config = {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-         // editUrl:
-          //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl:
+            'https://github.com/ia-trainingdepartment/ignition-sdk-guide',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -71,13 +71,18 @@ const config = {
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+
     ({
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+      },
       navbar: {
         style: 'primary',
         title: "Ignition SDK Programmer's Guide",
         logo: {
           alt: 'My Site Logo',
-          src: 'img/Logo-IA-Gear-Inverse.svg',
+          src: 'img/Logo-Ignition-Check.svg',
         },
         items: [
           {

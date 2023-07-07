@@ -44,12 +44,9 @@ Once installed, follow these instructions at the command line, in the javascript
         # yarn run build:prod
         
     ```
----
  
-:::note
-When installing this example module for the first time, the above steps must be performed in order to build `homeconnect.js`. If it is not built, the module file size will only be around 15kb after running `mvn-package` and the status page will not appear. Correctly built, the module size will be around 75kb after running `mvn-package`.
-:::
----
+> **Note**
+> When installing this example module for the first time, the above steps must be performed in order to build `homeconnect.js`. If it is not built, the module file size will only be around 15kb after running `mvn-package` and the status page will not appear. Correctly built, the module size will be around 75kb after running `mvn-package`.
 
 Webpack transpiles this React source code into a javascript file which is located in `hce-gateway/src/main/resources/mounted/js`. That transpiled javascript is what is ultimately mounted and served by Ignition.
 

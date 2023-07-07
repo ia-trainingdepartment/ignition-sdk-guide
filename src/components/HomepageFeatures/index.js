@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'SDK Guide',
-    Svg: require('@site/static/img/Logo-IgnitionDesigner-Check.svg').default,
+    Svg: require('@site/static/img/SDK-Guide-Icon.svg').default,
     description: (
       <>
         Learn how to use the <a href="docs/intro">Ignition Software Development Kit</a> to build your own modules.
@@ -23,7 +23,7 @@ const FeatureList = [
  // },
   {
     title: 'Module Examples',
-    Svg: require('@site/static/img/github-mark.svg').default,
+    Svg: require('@site/static/img/Module-Examples-Icon.svg').default,
     description: (
       <>
          Browse <a href="https://github.com/inductiveautomation/ignition-sdk-examples">Ignition SDK example projects</a> including Perspective and Vision components, an OPC UA device, and more.
@@ -32,7 +32,7 @@ const FeatureList = [
   },
   {
     title: 'Ignition Module Development Community',
-    Svg: require('@site/static/img/Logo-Ignition-Check.svg').default,
+    Svg: require('@site/static/img/Ignition-Module-Development-Community-Icon.svg').default,
     description: (
       <>
          Join <a href="https://github.com/IgnitionModuleDevelopmentCommunity">the open source community</a> for Ignition module development.
@@ -41,7 +41,7 @@ const FeatureList = [
   },
   {
     title: 'Module Development Forum',
-    Svg: require('@site/static/img/Logo-InductiveConversations-IconOnly.svg').default,
+    Svg: require('@site/static/img/Module-Development-Forum-Icon.svg').default,
     description: (
       <>
          Connect with other community developers <a href="https://forum.inductiveautomation.com/c/module-development/7">on the Ignition Module Development Forum.</a>  
@@ -50,7 +50,7 @@ const FeatureList = [
   },
   {
     title: 'Java API Docs',
-    Svg: require('@site/static/img/java.svg').default,
+    Svg: require('@site/static/img/Java-API-Docs-Icon.svg').default,
     description: (
       <>
         Reference the <a href="https://github.com/inductiveautomation/ignition-sdk-examples/wiki/Javadocs-&-Notable-API-Changes">Ignition Javadocs</a> and review notable API changes.

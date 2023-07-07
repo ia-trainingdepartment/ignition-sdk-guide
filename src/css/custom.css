@@ -6,7 +6,9 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   --ifm-color-primary: #003e69;
   --ifm-color-primary-dark: #00385e;
   --ifm-color-primary-darker: #003559;
@@ -30,13 +32,25 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+body {
+  color: #39464B;
+}
+
+h0 {
+  font-size: x-large;
+  color: white;
+}
+
+h1 {
+  color: #445C6D;
+}
 
 h2 {
   color: #f7901e;
 }
 
 h3 {
-  color: var(--ifm-color-primary-lightest)
+  color: #445C6D;
 }
 table {
   table-layout: fixed;
@@ -46,6 +60,7 @@ table {
 }
 
 a {
+  color: #4A90AD;
   font-weight: 600;
 }
 
