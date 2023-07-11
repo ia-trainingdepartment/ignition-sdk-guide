@@ -13,6 +13,7 @@ To use the progress system, you must first create a task. This is done by implem
 - One for the task title
 - One dictating whether the task can be canceled 
 - A "run" function that actually performs the task
+
 The run function takes a `TaskProgressListener` which it can update with information, and through which the cancel state will be sent.
 
 Once defined, the task should be registered with the `ClientProgressManager.runTask()` function. There are two forms of this function, one of which takes an additional boolean flag indicating whether the task is dominant. 
