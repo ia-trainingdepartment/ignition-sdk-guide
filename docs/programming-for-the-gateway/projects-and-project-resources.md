@@ -12,4 +12,6 @@ When deserializing, it is important to use the deserializer created by `GatewayC
 
 Modules can add a `ProjectListener` to the `ProjectManager` in order to be notified when a project is added, removed, or modified.
 
+You can use the `CompletableFuture<> requestScan()` public method to the`ProjectManagerBase` to request that the project directory is scanned immediately for project and resource updates.
+
 It's important to realize that the Project class serves a variety of purposes. It can be a fully loaded project, but can also represent a subset of a project, or simply the structure, without resource data actually present.
