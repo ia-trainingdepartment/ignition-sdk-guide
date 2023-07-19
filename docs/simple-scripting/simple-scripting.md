@@ -5,7 +5,7 @@ sidebar_position: 2
 ![Scripting-function-g example project opened in IntelliJ](2023-03-20_15-01-03.png)
 ## Overview
 This module (`scripting-function-g`) provides a basic example of a scripting function that executes through a remote procedure call (RPC).
-In a [Client scope](/docs/programming-for-the-client/programming-for-the-client.md), the function delegates to the module's RPC handler, which then calls `multiply` on the Gateway and returns the result.
+In a [Client scope](/docs/vision-development//vision-client-development/vision-client-development.md), the function delegates to the module's RPC handler, which then calls `multiply` on the Gateway and returns the result.
 
 In this tutorial, you'll examine some of the classes that make this function work before installing the example module onto your own Gateway. Next, you'll add your own function to the `AbstractScriptModule` class provided by the example.
 
