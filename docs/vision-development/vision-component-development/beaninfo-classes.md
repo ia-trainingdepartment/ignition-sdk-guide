@@ -1,6 +1,6 @@
 ---
 title: BeanInfo Classes
-sidebar_position: 2
+sidebar_position: 3
 ---
 Each of your components will have a corresponding BeanInfo class. These classes are loaded up in the Designer scope only, and are used to describe the component to the Designer.
 
