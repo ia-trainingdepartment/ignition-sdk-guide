@@ -16,4 +16,4 @@ The following systems expose themselves as extension points, meaning that module
 * User sources
 * OPC UA module device
 
-To get started building an extension point implementation, see [Extending Ignition with Extension Points](/docs/programming-for-the-gateway/extending-ignition-with-extension-points.md).
+To get started building an extension point implementation, see [Extending Ignition with Extension Points](break/docs/programming-for-the-gateway/extending-ignition-with-extension-points.md).
