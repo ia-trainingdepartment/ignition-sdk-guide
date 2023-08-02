@@ -11,3 +11,5 @@ In general, the Ignition platform follows the recommendations of the Oracle Code
 * **"SR*"** naming convention. 
 
     During early development, Ignition was referred to as "ScadaRail". This led to many classes being named with the initial abbreviation **SR**, a practice that has been abandoned, but not completely reversed.
+
+  
