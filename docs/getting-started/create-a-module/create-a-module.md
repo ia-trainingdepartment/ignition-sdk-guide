@@ -8,7 +8,7 @@ Creating a basic module from scratch is not difficult, but we've tried to minimi
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## Pull tools repository
+## Pull Tools Repository
 The tools repository you choose will depend on your build system. Before pulling a repository, make sure [you have Git installed](https://git-scm.com/downloads).
 
 <Tabs groupId="buildTools">
@@ -30,7 +30,7 @@ git clone https://github.com/inductiveautomation/ignition-sdk-archetypes
   </Tabs>  
 
 Once you have the module tools in hand you can generate a new project through the command line.    
-## Create a new project
+## Create a New Project
 
 
   <Tabs groupId="buildTools">
@@ -52,15 +52,15 @@ Once you have the module tools in hand you can generate a new project through th
 
 | Prompt | Description | Example |
 |--------|-------------|---------|
-| Enter scopes: | The scopes your module will require, including Gateway (`G`), Client (`C`), and Designer (`D`). | `GCD` |
-| Human readable name: | A name for your new project. | `New SDK Project` |
-| Root package: | A reverse domain name specific to your organization and project. | `com.inductiveautomation.ignition.newsdkproject` |
-| Language: | Language for gradle buildscripts. Possible values are `kotlin` and `groovy`. Default: `kotlin`. | `kotlin` |
+| Enter scopes | The scopes your module will require, including Gateway (`G`), Client (`C`), and Designer (`D`). Note that these values are case sensitive.| `GCD` |
+| Human readable name | A name for your new project. | `New SDK Project` |
+| Root package | A reverse domain name specific to your organization and project. | `com.inductiveautomation.ignition.newsdkproject` |
+| Language | Language for gradle buildscripts. Possible values are `kotlin` and `groovy`. Default: `kotlin`. | `kotlin` |
 
 This will create a new project structure for you with seperate directories for each of the Gateway, Designer and Client scopes, as well as a Common and Build directory. If you receive a `BUILD SUCCESSFUL` message, you can close the command prompt and open your new project in your preferred IDE:
 
 
-![IntelliJ IDE with New SDK Project open](new-sdk-project.jpg)
+![IntelliJ IDE with New SDK Project open](new-sdk-project.png)
  
   </TabItem>
 
