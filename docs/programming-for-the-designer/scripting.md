@@ -27,14 +27,14 @@ Methods will only be added to the given location’s namespace if they meet the 
 - The method name does not contain a literal ‘$’ character
 - The method is not throw, according to bytecode, the PyIgnoreMethodTag exception
 
-<!--->
+<!---
 *This part is commented out because it currently is incorrect  due to a bug. There is currently a bug fix that will address this issue (IGN-6751).
 Location (H3)
 The "location" parameter specifies the namespace where the functions will be loaded. For example, if you add a class Foo, who has a function bar(), at location "foo", you would be able to call that function in the following way:
 import foo foo.bar()
 Important: As illustrated here, the namespace is not automatically imported. However, you are allowed to add functions under the "system" namespace, which is automatically imported. So, if instead of location 'foo", we used 'system.foo", we could call the function directly with:
 system.foo.bar()
-<--->
+--->
 
 ### Adding Documentation
 When libraries are added using the base `addScriptModule` function, the libraries will not have any documentation associated with them. To provide documentation, you need to implement a `ScriptFunctionDocProvider` for your class, and call the overload of `addScriptModule` that takes the provider. This interface is self explanatory, and simply provides documentation for the various components of the scripting functions (return value, parameters, function). It is also possible to define documentation through properties files, and link them through annotations, using the `PropertiesFileDocProvider` helper class.
