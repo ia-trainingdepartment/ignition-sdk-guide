@@ -13,7 +13,7 @@ The Ignition SDK consists of a collection of APIs that are provided as hosted Ar
 
 The interfaces and resources that define the API are resolved by your build when it's time to compile your code into a module.  If you are using a modern IDE or Text Editor with "Auto Import" abilities, your dependencies will be available just as if you had the jars locally. Note that the initial depedency resolution from the Inductive Automation Nexus repo will require an internet connection to download the Artifacts.
 
-## What can you do?
+## What Can You Do?
 
 The scope of an Ignition module is extremely broad - from adding something minor to complement the framework or leverage the framework to create an entirely new product. Modules can even add new functionality to other modules!
 
