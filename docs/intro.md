@@ -25,7 +25,7 @@ Here are some ideas, in no particular order, to help spur creativity:
 * Insert new useful functions into the scripting system
 * Create a new authentication profile type
 * Add some sort of industry-specific suite of functionality 
-* Implement a numerical analysis that Ignition doesn't yet include
+
 
 ## Prerequisite Knowledge
 To be successful with the Ignition Module SDK, you'll want to become acquainted with the following technologies and concepts before you get started.
