@@ -17,7 +17,6 @@ The interfaces and resources that define the API are resolved by your build when
 
 The scope of an Ignition module is extremely broad - from adding something minor to complement the framework or leverage the framework to create an entirely new product. Modules can even add new functionality to other modules!
 
-
 Here are some ideas, in no particular order, to help spur creativity:
 
 * Write an ethernet driver for a PLC or other device.
