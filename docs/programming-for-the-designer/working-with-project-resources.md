@@ -11,7 +11,7 @@ Code Example/Snippets
 --->
 
 ## Project Resource - Designer
-In the Designer scope, you will register your resource orkspace and a project browser node. It is generally recommended to subclass [`TabbedResourceWorkspace`](/docs/programming-for-the-designer/building-a-workspace.md#tabbed-resource-workspace) to give end users the most familiar editing paradigm. `TabbedResourceWorkspace` will automatically create instances of your `ResourceEditor` subclass and manage bookkeeping for you.
+In the Designer scope, you will register your resource workspace and a project browser node. It is generally recommended to subclass [`TabbedResourceWorkspace`](/docs/programming-for-the-designer/building-a-workspace.md#tabbed-resource-workspace) to give end users the most familiar editing paradigm. `TabbedResourceWorkspace` will automatically create instances of your `ResourceEditor` subclass and manage bookkeeping for you.
 
 <!---
 Code Example/Snippets
@@ -22,4 +22,8 @@ On the Gateway, we register a new `ProjectLifecycleFactory` that will automatica
 
 <!---
 Code Example/Snippets
+--->
+
+<!--- 
+Had meeting with Paul G, need to review meeting and notes and will finish this page up
 --->
