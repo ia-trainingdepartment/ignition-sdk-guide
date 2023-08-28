@@ -25,26 +25,8 @@
   justify-content: center;
 }
 
-.searchbar {
-  background-color: #003e69;
-  /* margin-top:5%; */
-  margin-left: auto !important;
-  padding:0;
-  /* margin-right: auto !important; */
-  /* width: 100% !important; */
-  overflow:hidden;
-}
 
-.searchbar_src-pages-index-module {
-  background-color: red;
-  margin-left:auto;
-  margin-right:auto;
-  width:40%;
-}
 
-.DocSearch.DocSearch-Button[aria-label="Search"] {
-  background-color: red;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  width: 100% !important;
-}
+
+
+
