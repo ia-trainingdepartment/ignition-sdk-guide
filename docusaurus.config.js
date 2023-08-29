@@ -99,7 +99,7 @@ const config = {
     // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
     typesenseSearchParameters: {
       queryBy:'content',
-      // filter_by: 'version_tag:=0.21.0' // Useful when you have versioned docs
+      // filter_by: 'version:=8.1' // Useful when you have versioned docs
 
     },
     placeholder:"Explore the Ignition SDK Universe",
