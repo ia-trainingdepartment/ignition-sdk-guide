@@ -5,7 +5,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import { Helmet } from 'react-helmet';
-import SearchBarComponentInjector from '../components/SearchBarComponentInjector/SearchBarComponentInjector';
 
 import styles from '.';
 
