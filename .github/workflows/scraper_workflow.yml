@@ -20,10 +20,10 @@ jobs:
           api-key: ${{ secrets.TYPESENSE_API_KEY }}
           
           # The hostname or IP address of your Typesense server. Required.
-          host: xxx.a1.typesense.net
+          host: SearchNodeALB-325611644.us-east-1.elb.amazonaws.com
           
           # The port on which your Typesense server is listening. Optional. Default: 8108.
-          port: 8108
+          port: 80
           
           # The protocol to use when connecting to your Typesense server. Optional. Default: http.
           protocol: http
