@@ -33,7 +33,7 @@ jobs:
 
       - name: Run Amplify Build
         run: |
-          amplifyPush --simple
+          amplify push --simple
           
   next_job:
     runs-on: ubuntu-latest
