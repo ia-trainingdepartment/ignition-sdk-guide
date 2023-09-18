@@ -34,7 +34,8 @@ jobs:
       - name: Run Amplify Build
         run: |
           echo "Deploy app $aws_app_id branch $branch_name"
-          aws amplify start-job --app-id $aws_app_id --branch-name $branch_name --job-type RELEASE
+          jq --version
+          amplify start-job --app-id $aws_app_id --branch-name $branch_name --job-type RELEASE
           #JOB_ID=$(aws amplify start-job --app-id $aws_app_id --branch-name $branch_name --job-type RELEASE | jq -r '.jobSummary.jobId')
           echo "Release started"
           echo "Job ID is $JOB_ID"
