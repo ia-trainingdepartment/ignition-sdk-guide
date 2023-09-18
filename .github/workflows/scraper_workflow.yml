@@ -26,15 +26,13 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: us-east-1 # Adjust the region if needed
-      
+
       - name: Verify Amplify CLI
         run: |
           amplify --version
 
       - name: Run Amplify Build
         run: |
-          aws_app_id= "dlgx5vu2j8upd"
-          branch_name= "main"
           echo "Deploy app $aws_app_id branch $branch_name"
           JOB_ID=$(aws amplify start-job --app-id $aws_app_id --branch-name $branch_name --job-type RELEASE | jq -r '.jobSummary.jobId')
           echo "Release started"
@@ -43,6 +41,9 @@ jobs:
           JOB_STATUS="$(aws amplify get-job --app-id $aws_app_id --branch-name $branch_name --job-id $JOB_ID | jq -r '.job.summary.status')"
           echo "Job finished"
           echo "Job status is $JOB_STATUS"
+        env:
+          aws_app_id: dlgx5vu2j8upd
+          branch_name: main
           
   next_job:
     runs-on: ubuntu-latest
