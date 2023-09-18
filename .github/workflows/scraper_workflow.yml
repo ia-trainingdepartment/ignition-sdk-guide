@@ -28,11 +28,12 @@ jobs:
           AWS_REGION: us-east-1 # Adjust the region if needed
       
       - name: Verify Amplify CLI
-      run: amplify --version
+        run: |
+          amplify --version
 
       - name: Run Amplify Build
         run: |
-          amplifyPush --simple
+          amplify push --simple
           
   next_job:
     runs-on: ubuntu-latest
