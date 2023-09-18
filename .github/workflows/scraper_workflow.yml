@@ -32,7 +32,7 @@ jobs:
           amplify --version
 
       - name: Run Amplify Build
-        run: ./scripts/github_action_script
+        run: ./scripts/github_action_script.sh
     
         env:
           aws_app_id: dlgx5vu2j8upd
