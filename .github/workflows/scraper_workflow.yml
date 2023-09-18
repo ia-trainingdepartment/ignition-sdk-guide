@@ -41,6 +41,9 @@ jobs:
         env:
           aws_app_id: dlgx5vu2j8upd
           branch_name: main
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: us-east-1 # Adjust the region if needed!!
           
   next_job:
     runs-on: ubuntu-latest
