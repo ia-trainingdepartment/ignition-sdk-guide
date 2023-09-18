@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-jortegasdkguide-dev-112301-authRole",
+      "UnauthRoleArn": "arn:aws:iam::823659002565:role/amplify-jortegasdkguide-dev-112301-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::823659002565:role/amplify-jortegasdkguide-dev-112301-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-jortegasdkguide-dev-112301-deployment",
+      "UnauthRoleName": "amplify-jortegasdkguide-dev-112301-unauthRole",
+      "StackName": "amplify-jortegasdkguide-dev-112301",
+      "StackId": "arn:aws:cloudformation:us-east-1:823659002565:stack/amplify-jortegasdkguide-dev-112301/67fd25c0-5650-11ee-a5e7-0e46e87b6275",
+      "AmplifyAppId": "dlgx5vu2j8upd"
+    }
+  }
+}
