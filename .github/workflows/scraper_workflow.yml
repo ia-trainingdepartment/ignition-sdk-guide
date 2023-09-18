@@ -1,4 +1,4 @@
-name: Scrapin' Bacon baby!
+name: Build and Deploy Workflow
 
 on:
   pull_request:
@@ -6,27 +6,47 @@ on:
       - main
 
 jobs:
-  scrape_please:
-    name: scrape please!
+  amplify_build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' 
+          cache: npm
+
+      - name: Install Amplify CLI
+        run: |
+          npm install -g @aws-amplify/cli
+          amplify configure # Configure your Amplify settings if needed
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: us-east-1 # Adjust the region if needed
+
+      - name: Run Amplify Build
+        run: |
+          amplifyPush --simple
+          
+  next_job:
+    runs-on: ubuntu-latest
+    needs: amplify_build # This job depends on the "amplify_build" job
+    if: success() # This job will run only if "amplify_build" succeeds
+    steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3   # You MUST checkout your repository first!
-    
+        uses: actions/checkout@v3   # MUST checkout repository first!
+
       - name: Run DocSearch Scraper
         uses: celsiusnarhwal/typesense-scraper@v2
         with:
-          # The secret containing your Typesense API key. Required.
           api-key: ${{ secrets.TYPESENSE_API_KEY }}
+          host: xxx.a1.typesense.net # In case of 3 node cluster in aws we should point this to the ALB endpoint
           
-          # The hostname or IP address of your Typesense server. Required.
-          host: SearchNodeALB-325611644.us-east-1.elb.amazonaws.com
-          
-          # The port on which your Typesense server is listening. Optional. Default: 8108.
-          port: 80
-          
-          # The protocol to use when connecting to your Typesense server. Optional. Default: http.
-          protocol: http
-          
-          # The path to your DocSearch config file. Optional. Default: docsearch.config.json.
+          # The port Typesense server is listening.
+          port: 8108
+          protocol: http          
+          # The path to  DocSearch config file.
           config: docsearch.config.json

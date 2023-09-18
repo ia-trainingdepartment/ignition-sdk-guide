@@ -1,0 +1,9 @@
+{
+    "label": "Tag Examples",
+    "position": 10,
+    "link": {
+      "type": "generated-index",
+      "description": "Code examples are provided below that you can use to create, edit, read, write, and delete tags from code in your own module."
+    }
+  }
+  
