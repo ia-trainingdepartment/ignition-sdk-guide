@@ -31,8 +31,12 @@ jobs:
         run: |
           amplify --version
 
+      - name: Make script executable
+        run: |
+          chmod +x ./scripts/github_action_script.sh
+
       - name: Run Amplify Build
-        run: ./scripts/github_action_script.sh
+        run: ./scripts/github_action_script.sh dlgx5vu2j8upd main
     
         env:
           aws_app_id: dlgx5vu2j8upd
