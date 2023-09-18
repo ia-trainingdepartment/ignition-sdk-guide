@@ -16,9 +16,3 @@ aws amplify get-job --app-id $aws_app_id --branch-name $branch_name --job-id $JO
 JOB_STATUS="$(aws amplify get-job --app-id $aws_app_id --branch-name $branch_name --job-id $JOB_ID --query 'job.summary.status' --output text)"
 echo "Job finished"
 echo "Job status is $JOB_STATUS"
-With these debugging statements added, you'll be able to see the exact output produced by the AWS CLI commands in the GitHub Actions logs. This will help pinpoint the issue and determine why the JOB_ID variable is not getting the expected value. Please run the workflow again and share the updated output so that we can further troubleshoot if necessary.
-
-
-
-
-
