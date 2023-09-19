@@ -64,4 +64,4 @@ jobs:
           port: 80
           protocol: http          
           # The path to  DocSearch config file.
-          config: ./docsearch.config.json
+          config: docsearch.config.json
