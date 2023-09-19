@@ -56,12 +56,12 @@ jobs:
       - name: Run DocSearch Scraper
         uses: celsiusnarhwal/typesense-scraper@v2
         with:
-          api-key: ${{ secrets.TYPESENSE_API_KEY }}
+          TYPESENSE_API_KEY: ${{ secrets.TYPESENSE_API_KEY }}
           # api-key: WNxMb4u624O6e7yTbS28bSsmcS6TuP0b 
-          host: SearchNodeALB-325611644.us-east-1.elb.amazonaws.com # In case of 3 node cluster in aws we should point this to the ALB endpoint
+          TYPESENSE_HOST: SearchNodeALB-325611644.us-east-1.elb.amazonaws.com # In case of 3 node cluster in aws we should point this to the ALB endpoint
           
           # The port Typesense server is listening.
-          port: 80
-          protocol: http          
+          TYPESENSE_PORT: 80
+          TYPESENSE_PROTOCOL: http          
           # The path to  DocSearch config file.
           config: docsearch.config.json
