@@ -1,7 +1,7 @@
 {
 	"index_name": "ia_um",
 	"start_urls": [
-		"https://sdk-docs.inductiveautomation.com/"
+		"https://sdk-docs.inductiveautomation.com/docs"
 	],
 	"sitemap_urls": [
 		
