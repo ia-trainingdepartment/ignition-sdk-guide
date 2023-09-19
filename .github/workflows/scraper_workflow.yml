@@ -51,7 +51,7 @@ jobs:
     # if: success() # This job will run only if "amplify_build" succeeds!!!
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3   # MUST checkout repository first!
+        uses: actions/checkout@v3   # MUST checkout repository first!!
 
       - name: Run DocSearch Scraper
         uses: celsiusnarhwal/typesense-scraper@v2
