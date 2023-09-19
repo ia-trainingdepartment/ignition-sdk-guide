@@ -48,7 +48,7 @@ jobs:
   next_job:
     runs-on: ubuntu-latest
     needs: amplify_build # This job depends on the "amplify_build" job
-    if: success() # This job will run only if "amplify_build" succeeds!!
+    if: success() # This job will run only if "amplify_build" succeeds!!!
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3   # MUST checkout repository first!
