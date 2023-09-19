@@ -59,7 +59,7 @@ jobs:
           api-key: ${{ secrets.TYPESENSE_API_KEY }}
           # api-key: WNxMb4u624O6e7yTbS28bSsmcS6TuP0b 
           host: SearchNodeALB-325611644.us-east-1.elb.amazonaws.com # In case of 3 node cluster in aws we should point this to the ALB endpoint
-          # The port for the ALB is just 80
+          # The port for the ALB is just 80!
           port: 80
           protocol: http          
           # The path to  DocSearch config file.
