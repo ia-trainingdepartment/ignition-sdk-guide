@@ -61,7 +61,7 @@ jobs:
           host: SearchNodeALB-325611644.us-east-1.elb.amazonaws.com # In case of 3 node cluster in aws we should point this to the ALB endpoint
           
           # The port Typesense server is listening.
-          port: 8108
+          port: 80
           protocol: http          
           # The path to  DocSearch config file.
           config: docsearch.config.json
