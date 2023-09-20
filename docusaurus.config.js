@@ -80,7 +80,7 @@ const config = {
         {
           host: 'search.sdk-docs.inductiveautomation.com',
           port: 80,
-          protocol: 'http',
+          protocol: 'https',
         },
         // {
         //   host: 'xxx-2.a1.typesense.net',
