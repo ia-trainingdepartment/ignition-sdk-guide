@@ -1,9 +1,14 @@
-echo "Deploy app ${{ env.aws_app_id }} branch ${{ env.branch_name }}"
-jq --version
-JOB_ID=$(aws amplify start-job --app-id ${{ env.aws_app_id }} --branch-name ${{ env.branch_name }} --job-type RELEASE | jq -r '.jobSummary.jobId')
+#!/bin/bash
+
+echo "Deploy app $aws_app_id branch $branch_name"
+
+JOB_ID=$(aws amplify start-job --app-id $aws_app_id --branch-name $branch_name --job-type RELEASE --query 'jobSummary.jobId' --output text)
+
 echo "Release started"
 echo "Job ID is $JOB_ID"
-while [[ "$(aws amplify get-job --app-id ${{ env.aws_app_id }} --branch-name ${{ env.branch_name }} --job-id $JOB_ID | jq -r '.job.summary.status')" =~ ^(PENDING|RUNNING)$ ]]; do sleep 1; done
-JOB_STATUS="$(aws amplify get-job --app-id ${{ env.aws_app_id }} --branch-name ${{ env.branch_name }} --job-id $JOB_ID | jq -r '.job.summary.status')"
+
+while [[ "$(aws amplify get-job --app-id $aws_app_id --branch-name $branch_name --job-id $JOB_ID --query 'job.summary.status' --output text)" =~ ^(PENDING|RUNNING)$ ]]; do sleep 1; done
+
+JOB_STATUS="$(aws amplify get-job --app-id $aws_app_id --branch-name $branch_name --job-id $JOB_ID --query 'job.summary.status' --output text)"
 echo "Job finished"
 echo "Job status is $JOB_STATUS"

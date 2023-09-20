@@ -31,29 +31,36 @@ jobs:
         run: |
           amplify --version
 
+      - name: Make script executable
+        run: |
+          chmod +x ./scripts/github_action_script.sh
+
       - name: Run Amplify Build
-        run: ./scripts/github_action_script dlgx5vu2j8upd main
+        run: ./scripts/github_action_script.sh dlgx5vu2j8upd main
     
         env:
           aws_app_id: dlgx5vu2j8upd
           branch_name: main
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: us-east-1 # Adjust the region if needed!!
           
   next_job:
     runs-on: ubuntu-latest
-    needs: amplify_build # This job depends on the "amplify_build" job
-    if: success() # This job will run only if "amplify_build" succeeds
+    # needs: amplify_build # This job depends on the "amplify_build" job
+    # if: success() # This job will run only if "amplify_build" succeeds!!!
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3   # MUST checkout repository first!
+        uses: actions/checkout@v3   # MUST checkout repository first!!
 
       - name: Run DocSearch Scraper
         uses: celsiusnarhwal/typesense-scraper@v2
         with:
           api-key: ${{ secrets.TYPESENSE_API_KEY }}
+          # api-key: WNxMb4u624O6e7yTbS28bSsmcS6TuP0b 
           host: SearchNodeALB-325611644.us-east-1.elb.amazonaws.com # In case of 3 node cluster in aws we should point this to the ALB endpoint
-          
-          # The port Typesense server is listening.
-          port: 8108
+          # The port for the ALB is just 80!
+          port: 80
           protocol: http          
           # The path to  DocSearch config file.
           config: docsearch.config.json

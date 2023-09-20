@@ -78,8 +78,8 @@ const config = {
     typesenseServerConfig: {
       nodes: [
         {
-          host: 'localhost',
-          port: 8108,
+          host: 'SearchNodeALB-325611644.us-east-1.elb.amazonaws.com',
+          port: 80,
           protocol: 'http',
         },
         // {
@@ -93,7 +93,7 @@ const config = {
         //   protocol: 'https',
         // },
       ],
-      apiKey: 'C3D6X494OpD36rN1i50NMUOn3nmxslbDs4DV9eQVzfexL6hK',
+      apiKey: '3YKZtX5xSnPBGX97IsYGB34ClSp6rtqE',
     },
 
     // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
