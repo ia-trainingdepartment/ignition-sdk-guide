@@ -78,7 +78,7 @@ const config = {
     typesenseServerConfig: {
       nodes: [
         {
-          host: 'SearchNodeALB-325611644.us-east-1.elb.amazonaws.com',
+          host: 'search.sdk-docs.inductiveautomation.com',
           port: 80,
           protocol: 'http',
         },
