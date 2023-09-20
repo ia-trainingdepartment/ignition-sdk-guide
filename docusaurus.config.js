@@ -79,7 +79,7 @@ const config = {
       nodes: [
         {
           host: 'search.sdk-docs.inductiveautomation.com',
-          port: 80,
+          port: 443,
           protocol: 'https',
         },
         // {
