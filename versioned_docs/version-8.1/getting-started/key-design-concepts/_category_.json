@@ -1,8 +1,0 @@
-{
-    "label": "Key Design Concepts",
-    "position": 5,
-    "link": {
-      "type": "generated-index",
-      "description": "This section will introduce certain design paradigms that are common across all of Ignition and may be different from other systems that you've programmed for in the past."
-    }
-  }
