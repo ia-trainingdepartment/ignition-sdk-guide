@@ -82,16 +82,6 @@ const config = {
           port: 443,
           protocol: 'https',
         },
-        // {
-        //   host: 'xxx-2.a1.typesense.net',
-        //   port: 443,
-        //   protocol: 'https',
-        // },
-        // {
-        //   host: 'xxx-3.a1.typesense.net',
-        //   port: 443,
-        //   protocol: 'https',
-        // },
       ],
       apiKey: '3YKZtX5xSnPBGX97IsYGB34ClSp6rtqE',
     },
@@ -115,12 +105,12 @@ const config = {
       src: 'img/Logo-Ignition-Check.svg',
     },
     items: [
-      {
-        type: 'docsVersionDropdown',
-        position: 'left',
-        dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
-        dropdownActiveClassDisabled: true,
-      },
+      // {
+      //   type: 'docsVersionDropdown',
+      //   position: 'left',
+      //   dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
+      //   dropdownActiveClassDisabled: true,
+      // },
       {
         href: 'https://github.com/inductiveautomation/ignition-sdk-examples',
         label: 'Example Modules',
