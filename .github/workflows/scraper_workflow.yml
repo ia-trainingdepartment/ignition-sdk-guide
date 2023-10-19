@@ -62,7 +62,7 @@ jobs:
           # api-key: WNxMb4u624O6e7yTbS28bSsmcS6TuP0b 
           host: search.sdk-docs.inductiveautomation.com # In case of 3 node cluster in aws we should point this to the ALB endpoint OR the route 53 DNS cname record
           # The port for is just default web port 80 for ALB 
-          # but for the route 53 implementation its SSL via 443
+          # but for the route 53 implementation its SSL via 443!
           port: 443
           protocol: https        
           # The path to  DocSearch config file.
