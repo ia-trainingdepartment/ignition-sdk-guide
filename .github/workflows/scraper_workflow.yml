@@ -21,7 +21,7 @@ jobs:
         with:
           role-to-assume: ${{ secrets.IAMROLE_GITHUB }}
           role-session-name: GitHub-Action-Role
-          aws-region: "us-east-1"
+          aws-region: "us-west-1"
 
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -65,7 +65,7 @@ jobs:
         with:
           role-to-assume: ${{ secrets.IAMROLE_GITHUB }}
           role-session-name: GitHub-Action-Role
-          aws-region: "us-east-1"
+          aws-region: "us-west-1"
         
   next_job:
     runs-on: ubuntu-latest
