@@ -106,6 +106,12 @@ const config = {
     },
     items: [
       // {
+      //   type: 'doc',
+      //   docId: 'intro',
+      //   position: 'left',
+      //   label: 'Documentation',
+      // },
+      // {
       //   type: 'docsVersionDropdown',
       //   position: 'left',
       //   dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
