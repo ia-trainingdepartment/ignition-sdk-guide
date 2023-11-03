@@ -1,0 +1,82 @@
+name: Build and Deploy Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  amplify_build:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    environment: Training Docs - Production
+    steps:
+    # Checkout the repository to the GitHub Actions runner
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.IAMROLE_GITHUB }}
+          role-session-name: GitHub-Action-Role
+          aws-region: "us-west-1"
+
+      # - name: Checkout code
+      #   uses: actions/checkout@v3
+   
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' 
+          cache: npm
+
+      - name: Install Amplify CLI
+        run: |
+          npm install -g @aws-amplify/cli
+          amplify configure # Configure your Amplify settings if needed
+        
+      - name: Verify Amplify CLI
+        run: |
+          amplify --version
+
+      - name: Make script executable
+        run: |
+          chmod +x ./scripts/github_action_script.sh
+
+      - name: Run Amplify Build
+        # jortega-sdk-example aws app id: dlgx5vu2j8upd
+        # production sdk-example aws app id: d3hioe1d32tr6w
+        run: ./scripts/github_action_script.sh d3hioe1d32tr6w main
+    
+        env:
+          aws_app_id: d3hioe1d32tr6w
+          branch_name: main       
+          
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.IAMROLE_GITHUB }}
+          role-session-name: GitHub-Action-Role
+          aws-region: "us-west-1"
+        
+  next_job:
+    runs-on: ubuntu-latest
+    needs: amplify_build # This job depends on the "amplify_build" job
+    if: success() # This job will run only if "amplify_build" succeeds!!!
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3   # MUST checkout repository first!!
+
+      - name: Run DocSearch Scraper
+        uses: celsiusnarhwal/typesense-scraper@v2
+        with:
+          api-key: ${{ secrets.TYPESENSE_API_KEY }}
+          # api-key: WNxMb4u624O6e7yTbS28bSsmcS6TuP0b 
+          host: search.sdk-docs.inductiveautomation.com # In case of 3 node cluster in aws we should point this to the ALB endpoint OR the route 53 DNS cname record
+          # The port for is just default web port 80 for ALB 
+          # but for the route 53 implementation its SSL via 443!
+          port: 443
+          protocol: https        
+          # The path to  DocSearch config file.
+          config: docsearch.config.json
