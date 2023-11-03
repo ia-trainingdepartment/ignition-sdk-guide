@@ -21,7 +21,7 @@ jobs:
         with:
           role-to-assume: ${{ secrets.IAMROLE_GITHUB }}
           role-session-name: GitHub-Action-Role
-          aws-region: "us-east-1"
+          aws-region: "us-west-1"
 
       # - name: Checkout code
       #   uses: actions/checkout@v3
@@ -36,10 +36,6 @@ jobs:
         run: |
           npm install -g @aws-amplify/cli
           amplify configure # Configure your Amplify settings if needed
-        # env:
-        #   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        #   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        #   AWS_REGION:  # Adjust the region if needed!!
         
       - name: Verify Amplify CLI
         run: |
@@ -52,20 +48,17 @@ jobs:
       - name: Run Amplify Build
         # jortega-sdk-example aws app id: dlgx5vu2j8upd
         # production sdk-example aws app id: d3hioe1d32tr6w
-        run: ./scripts/github_action_script.sh dlgx5vu2j8upd main
+        run: ./scripts/github_action_script.sh d3hioe1d32tr6w main
     
         env:
-          aws_app_id: dlgx5vu2j8upd
-          branch_name: main
-          # AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          # AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          # AWS_REGION: us-east-1 # Adjust the region if needed!!
+          aws_app_id: d3hioe1d32tr6w
+          branch_name: main       
           
       - uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: ${{ secrets.IAMROLE_GITHUB }}
           role-session-name: GitHub-Action-Role
-          aws-region: "us-east-1"
+          aws-region: "us-west-1"
         
   next_job:
     runs-on: ubuntu-latest
