@@ -105,6 +105,7 @@ const config = {
       src: 'img/Logo-Ignition-Check.svg',
     },
     items: [
+      //
       // {
       //   type: 'doc',
       //   docId: 'intro',
