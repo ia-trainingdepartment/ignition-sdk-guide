@@ -205,7 +205,6 @@ const config = {
 //               },
 //             ],
 //           },
-         ],
          copyright: `Copyright © ${new Date().getFullYear()} Inductive Automation, Inc. Built with Docusaurus.`,
        },
 //       prism: {
