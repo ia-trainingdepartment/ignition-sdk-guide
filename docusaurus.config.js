@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Ignition SDK Programmer's Guide!",
+  title: "Ignition SDK Programmer's Guide",
   tagline: 'Develop Ignition Modules using the Ignition Module SDK',
   url: 'https://www.sdk-docs.inductiveautomation.com/',
   baseUrl: '/',
@@ -159,97 +159,40 @@ const config = {
   //   isCloseable: false,
   // },
 },
-
-
-//   themeConfig:
-//     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-
-//     ({
-//       colorMode: {
-//         defaultMode: 'light',
-//         disableSwitch: true,
-//       },
-//       navbar: {
-//         style: 'primary',
-//         title: "Ignition SDK Programmer's Guide",
-//         logo: {
-//           alt: 'My Site Logo',
-//           src: 'img/Logo-Ignition-Check.svg',
-//         },
-//         items: [
-//           {
-//             type: 'doc',
-//             docId: 'intro',
-//             position: 'left',
-//             label: 'Documentation',
-//           },
-//           // {to: '/blog', label: 'How-to Articles', position: 'left'},
-//           {
-//             href: 'https://github.com/inductiveautomation/ignition-sdk-examples',
-//             label: 'Example Modules',
-//             position: 'left',
-//           },
-// //           {
-// //            href: 'https://forum.inductiveautomation.com/',
-// //            label: 'Forums',
-// //            position: 'left'
-// //          },
-//           {
-//             href: 'https://github.com/inductiveautomation/ignition-sdk-examples/wiki/Javadocs-&-Notable-API-Changes',
-//             label: 'Javadocs',
-//             position: 'left'
-//           }, 
-// //          {
-// //            href: 'https://support.inductiveautomation.com/hc/en-us',
-// //            label: 'Support',
-// //            position: 'right'
-// //          },         
-// //          {
-// //            href: 'https://inductiveuniversity.com/', 
-// //            label: 'Inductive University', 
-// //            position: 'right'
-// //          },
-//           {
-//             href: 'https://github.com/ia-trainingdepartment/ignition-sdk-guide',
-//             label: 'GitHub',
-//             position: 'right',
-//           },
-//         ],
-//       },
-//       footer: {
-//         style: 'dark',
-//         links: [
-//           {
-//             title: 'Docs',
-//             items: [
-//               {
-//                 label: 'SDK Guide',
-//                 to: '/docs/intro',
-//               },
-//               {
-//                 label: 'User Manual',
-//                 href: 'https://docs.inductiveautomation.com/display/DOC81',
-//               },
-//             ],
-//           },
-//           {
-//             title: 'Community',
-//             items: [
-//               {
-//                 label: 'Stack Overflow',
-//                 href: 'https://stackoverflow.com/questions/tagged/ignition',
-//               },
-//               {
-//                 label: 'Forums',
-//                 href: 'https://forum.inductiveautomation.com/',
-//               },
-//               {
-//                 label: 'Twitter',
-//                 href: 'https://twitter.com/InductiveAuto',
-//               },
-//             ],
-//           },
-//           {
+       footer: {
+         style: 'dark',
+         links: [
+           {
+             title: 'Docs',
+             items: [
+               {
+                 label: 'SDK Guide',
+                 to: '/docs/intro',
+               },
+               {
+                 label: 'User Manual',
+                 href: 'https://docs.inductiveautomation.com/display/DOC81',
+               },
+             ],
+           },
+           {
+             title: 'Community',
+             items: [
+               {
+                 label: 'Stack Overflow',
+                 href: 'https://stackoverflow.com/questions/tagged/ignition',
+               },
+               {
+                 label: 'Forums',
+                 href: 'https://forum.inductiveautomation.com/',
+               },
+               {
+                 label: 'Twitter',
+                 href: 'https://twitter.com/InductiveAuto',
+               },
+             ],
+           },
+           {
 //             title: 'More',
 //             items: [
 //               {
@@ -262,9 +205,9 @@ const config = {
 //               },
 //             ],
 //           },
-//         ],
-//         copyright: `Copyright © ${new Date().getFullYear()} Inductive Automation, Inc. Built with Docusaurus.`,
-//       },
+         ],
+         copyright: `Copyright © ${new Date().getFullYear()} Inductive Automation, Inc. Built with Docusaurus.`,
+       },
 //       prism: {
 //         theme: lightCodeTheme,
 //         darkTheme: darkCodeTheme,
