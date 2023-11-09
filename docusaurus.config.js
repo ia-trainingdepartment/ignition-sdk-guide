@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Ignition SDK Programmer's Guide!",
+  title: "Ignition SDK Programmer's Guide",
   tagline: 'Develop Ignition Modules using the Ignition Module SDK',
   url: 'https://www.sdk-docs.inductiveautomation.com/',
   baseUrl: '/',
