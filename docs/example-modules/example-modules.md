@@ -2,7 +2,7 @@
 title: Example Modules
 sidebar_position: 3
 ---
-Inductive Automation provides a variety of example SDK modules on our [ignition-sdk-examples GitHub repository](https://github.com/inductiveautomation/ignition-sdk-examples). his repository demonstrates some of the ways you can extend Ignition with the Ignition SDK. Examples include components, an expression function, an OPC UA Device, and more. Use the following command to clone the repository for your personal use:
+Inductive Automation provides a variety of example SDK modules on our [ignition-sdk-examples GitHub repository](https://github.com/inductiveautomation/ignition-sdk-examples). This repository demonstrates some of the ways you can extend Ignition with the Ignition SDK. Examples include components, an expression function, an OPC UA Device, and more. Use the following command to clone the repository for your personal use:
 
 ```git title="Clone the repository"
 git clone https://github.com/inductiveautomation/ignition-sdk-examples
